@@ -1,0 +1,11 @@
+---
+layout: default
+title: courses
+---
+
+<h4>Courses</h4>
+<div class="course-list">
+  {% for course in courses %}
+    {% include course-card.html course=course %}
+  {% endfor %}
+</div>
