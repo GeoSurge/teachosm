@@ -1,0 +1,23 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font, sans-serif;
+}
+
+html body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: $content-font, sans-serif;
+
+  .page {
+    height: 100%;
+  }
+}
+
+@import 'navbar';
+@import 'home';

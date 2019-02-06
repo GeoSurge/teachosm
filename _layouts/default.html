@@ -2,8 +2,11 @@
 <html>
   {% include head.html %}
   <body>
-    <div class="{{ page.name }}">
-      {{ content }}
+    <div class="page">
+      {% include navbar.html %}
+      <div class="{{ page.title }} content">
+        {{ content }}
+      </div>
     </div>
     {% include scripts.html %}
   </body>
