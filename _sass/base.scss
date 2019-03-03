@@ -19,6 +19,24 @@ html body {
   }
 }
 
+section {
+  h2.section-heading {
+    font-family: $title-font;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+
+  h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: $content-font;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
 @import 'navbar';
 @import 'home';
-@import 'about';
+@import 'footer';

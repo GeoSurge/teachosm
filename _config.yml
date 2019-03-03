@@ -7,7 +7,8 @@ theme: minima
 plugins:
   - jekyll-feed
 
-include: ['pages']
+include:
+  - pages
 
 collections:
   posts:
