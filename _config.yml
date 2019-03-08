@@ -1,15 +1,6 @@
 ---
 title: TeachOSM
 timezone: UTC
-
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-
-include:
-  - pages
-
 collections:
   posts:
     title: Posts
@@ -17,3 +8,9 @@ collections:
   uploads:
     title: Uploads
     output: true
+markdown: kramdown
+theme: minima
+plugins:
+- jekyll-feed
+include:
+- pages
