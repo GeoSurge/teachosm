@@ -1,7 +1,7 @@
 ## Description
 
+## Acceptance Criteria
+
 ## Mocks
 
 ## Reference Links
-
-## Acceptance Criteria
