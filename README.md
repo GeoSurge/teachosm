@@ -1,7 +1,7 @@
 # teachosm
 Test site for teachosm
 
-## install dependencies
+## install dependencies (recommend ruby version >= 2.3.0)
 ```
 gem install bundler jekyll
 bundle install
