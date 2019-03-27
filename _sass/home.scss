@@ -133,6 +133,12 @@
   color: #e74c3c;
 }
 
+#contact .btn:hover, .btn:focus {
+    color: black;
+    text-decoration: none;
+    border-color: #7EBC6F;
+}
+
 // .home {
 //   display: grid;
 //   grid-template-rows: 600px 600px 300px;
@@ -145,12 +151,6 @@
 //     grid-row-end: 2;
 //     grid-row-start: 1;
 //     width: 100%;
-
-//     .buttons {
-//       width: 50%;
-//       text-align: center;
-//       margin: auto;
-//       padding-top: 300px;
 
 //       > a:first-child {
 //         background-color: $primary-color;
@@ -192,8 +192,5 @@
 //     }
 //   }
 
-//   .calendar {
-//     padding-top: 32px;
-//     text-align: center;
-//   }
+
 // }
