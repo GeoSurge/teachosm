@@ -37,7 +37,9 @@
 }
 
 .about {
+
   margin-top: 72px;
+  margin-bottom: 72px;
 
   .about-heading {
     margin: 15px 0;
@@ -49,6 +51,18 @@
     color: white;
     background-color: $primary-color;
   }
+
+  height: 100vh;
+
+}
+
+.calendar {
+
+  margin-top: 72px;
+  margin-bottom: 72px;
+
+  height: 100vh;
+
 }
 
 .partners {
@@ -58,10 +72,9 @@
 }
 
 #contact {
-  background-color: #222;
-  background-image: url('/assets/images/map-image.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 64px 0;
 }
 
