@@ -39,7 +39,6 @@
 .about {
 
   margin-top: 72px;
-  margin-bottom: 72px;
 
   .about-heading {
     margin: 15px 0;
@@ -52,7 +51,6 @@
     background-color: $primary-color;
   }
 
-  height: 100vh;
 
 }
 
@@ -60,8 +58,6 @@
 
   margin-top: 72px;
   margin-bottom: 72px;
-
-  height: 100vh;
 
 }
 
@@ -93,6 +89,7 @@
 
 #contact .form-group input.form-control {
   height: auto;
+  font-family: sans-serif;
 }
 
 #contact .form-group textarea.form-control {

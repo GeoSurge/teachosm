@@ -1,6 +1,10 @@
 <!doctype html>
 <html>
-  {% include head.html %}
+  {% if page.my_variable %}
+    {% include {{ page.my_variable }} %}
+  {% else %}
+    {% include head.html %}
+  {% endif %}
   <body data-spy="scroll" data-target=".navbar2" data-offset="450">
     <div class="page">
       {% include navbar.html %}
