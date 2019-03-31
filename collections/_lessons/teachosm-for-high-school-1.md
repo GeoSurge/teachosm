@@ -1,0 +1,10 @@
+---
+title: "Teach OSM for High School"
+subtitle: "Module 1 - Intro to field papers"
+description: "Students work in groups to map a section of a property using OSM-available base maps in the field."
+author: "TeachOSM Contributors"
+thumbnail: "teachosm-for-high-school-1.png"
+preparation-time: 1
+module-time: 2
+lesson: ""
+---
