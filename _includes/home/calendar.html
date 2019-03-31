@@ -1,41 +1,40 @@
 <section class="calendar" id="calendar">
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12 text-center">
+  <div class="row">
+    <div class="col-lg-12 text-center">
 
-            <div class="intro-text">
-                <h2 class="section-heading">TeachOSM Calendar</h2>
-            </div>
+      <div class="intro-text">
+          <h2 class="section-heading">TeachOSM Calendar</h2>
+      </div>
 
-            <br>
+      <br>
 
-            <!--<div id="content">
-              <div class="titlebox">Events</div>
-                <ul id="legend-list">
-                    <li><dl>
-                            <dt>class 1:</dt>
-                            <dd> <div class="legend_color" id="class1-color"></div> </dd>
-                        </dl></li>
-                    <li><dl>
-                            <dt>class 2:</dt>
-                            <dd> <div class="legend_color" id="class2-color"></div> </dd>
-                        </dl></li>
-                    <li><dl>
-                            <dt>class 3:</dt>
-                            <dd> <div class="legend_color" id="class3-color"></div> </dd>
-                        </dl></li>
-                </ul>
-            </div>-->
+      <!--<div id="content">
+        <div class="titlebox">Events</div>
+          <ul id="legend-list">
+              <li><dl>
+                      <dt>class 1:</dt>
+                      <dd> <div class="legend_color" id="class1-color"></div> </dd>
+                  </dl></li>
+              <li><dl>
+                      <dt>class 2:</dt>
+                      <dd> <div class="legend_color" id="class2-color"></div> </dd>
+                  </dl></li>
+              <li><dl>
+                      <dt>class 3:</dt>
+                      <dd> <div class="legend_color" id="class3-color"></div> </dd>
+                  </dl></li>
+          </ul>
+      </div>-->
 
-            <br>
+      <br>
 
-            <div id='insert-calendar'></div>
-        
-        </div>
+      <div id='insert-calendar'></div>
+    
     </div>
+  </div>
 </div>
-
 
 <!--   http://www.mikesmithdev.com/blog/jquery-full-calendar-with-ui-modal-dialog/   -->
 <div id="eventContent" title="Event Details" style="display: none;">
@@ -48,63 +47,5 @@
 
 </section>
 
-<script>
-$(document).ready(function() {
-    $('#insert-calendar').fullCalendar({
-        googleCalendarApiKey: 'AIzaSyBPJJ7VIyVSY6gc6wtYtS2XLWJmoBttEG8',
-        events: {
-            googleCalendarId: 'qj09h89scmae2gjb13297a16rc@group.calendar.google.com',
-            color: 'none',   // an option!
-            textColor: 'white' // an option!
-        },
-        eventAfterRender: function (event, element, view) {
-        console.log(event.description);
-        console.log('printing event location: ');
-        console.log(event.location);
-        console.log(String(event.location));
+<script src="{{site.baseurl}}/assets/js/custom/teachosm_cal.js"></script>
 
-        var locationString = String(event.location);
-
-        if (locationString.toLowerCase().indexOf("class1") >= 0) {
-            element.css('background-color', 'lightBlue');
-            element.css('color', 'black');
-            element.css('border', '2px solid #72bcd4');
-        }
-        if (locationString.toLowerCase().indexOf("class2") >= 0) {
-            element.css('background-color', 'red');
-            element.css('border', '2px solid darkred');
-        }
-        if (locationString.toLowerCase().indexOf("class3") >= 0) {
-            element.css('background-color', '#ffff99');
-            element.css('color', 'black');
-            element.css('border', '2px solid #e7e700');
-        }
-    },
-    header: {
-      left:   'title',
-      center: '',
-      right:  'today prev,next'
-    },
-aspectRatio: 2,
-    eventClick:  function(event, jsEvent, view) {
-        //clears any existing value
-        $("#eventInfo").empty();
-        //set the values and open the modal
-        $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
-        $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
-        $("#eventInfo").html(event.description);
-        $("#eventLink").attr('href', event.url);
-        $("#eventContent").dialog({ modal: true, title: event.title });
-        $("#eventContent").dialog( "option", "width", 660 );
-        if (event.url) {
-            window.close(event.url);
-            return false;
-        }
-    }
-        
-    });
-});
-
-
-
-</script>

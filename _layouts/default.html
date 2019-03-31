@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
-  {% if page.my_variable %}
-    {% include {{ page.my_variable }} %}
+  {% if page.custom_head %}
+    {% include {{ page.custom_head }} %}
   {% else %}
     {% include head.html %}
   {% endif %}
