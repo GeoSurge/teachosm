@@ -6,7 +6,7 @@ author:
   name: "TeachOSM Contributors"
 thumbnail: "teachosm-for-high-school-3.png"
 preparation-time: 1
-module-time: 2
+lesson-time: 2
 lesson: ""
 url: "teachosm-for-high-school-3"
 tags:

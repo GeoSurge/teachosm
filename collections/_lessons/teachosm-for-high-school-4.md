@@ -6,7 +6,7 @@ author:
   name: "TeachOSM and OpenStreetMap Contributors"
 thumbnail: "teachosm-for-high-school-4.png"
 preparation-time: 1
-module-time: 2
+lesson-time: 2
 lesson: ""
 url: "teachosm-for-high-school-4"
 tags:

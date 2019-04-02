@@ -6,10 +6,7 @@ layout: default
 
 <div class="lessons-title">
   <h1 class="page-title">Lessons</h1>
-  <input id="lessons-search" placeholder="Search lessons..." />
+  <input id="lesson-search" placeholder="Search lessons..." />
 </div>
 <div class="lesson-list">
-  {% for lesson in site.lessons %}
-    {% include lessons/card.html lesson=lesson %}
-  {% endfor %}
 </div>
