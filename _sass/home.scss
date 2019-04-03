@@ -37,6 +37,7 @@
 }
 
 .about {
+
   margin-top: 72px;
 
   .about-heading {
@@ -49,6 +50,15 @@
     color: white;
     background-color: $primary-color;
   }
+
+
+}
+
+.calendar {
+
+  margin-top: 72px;
+  margin-bottom: 72px;
+
 }
 
 .partners {
@@ -58,10 +68,9 @@
 }
 
 #contact {
-  background-color: #222;
-  background-image: url('/assets/images/map-image.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 64px 0;
 }
 
@@ -80,6 +89,7 @@
 
 #contact .form-group input.form-control {
   height: auto;
+  font-family: sans-serif;
 }
 
 #contact .form-group textarea.form-control {
@@ -123,6 +133,12 @@
   color: #e74c3c;
 }
 
+#contact .btn:hover, .btn:focus {
+    color: black;
+    text-decoration: none;
+    border-color: #7EBC6F;
+}
+
 // .home {
 //   display: grid;
 //   grid-template-rows: 600px 600px 300px;
@@ -135,12 +151,6 @@
 //     grid-row-end: 2;
 //     grid-row-start: 1;
 //     width: 100%;
-
-//     .buttons {
-//       width: 50%;
-//       text-align: center;
-//       margin: auto;
-//       padding-top: 300px;
 
 //       > a:first-child {
 //         background-color: $primary-color;
@@ -182,8 +192,5 @@
 //     }
 //   }
 
-//   .calendar {
-//     padding-top: 32px;
-//     text-align: center;
-//   }
+
 // }

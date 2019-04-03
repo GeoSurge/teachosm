@@ -4,10 +4,9 @@ $accent-color: #d500f9;
 
 @import url('https://fonts.googleapis.com/css?family=Signika:300,400,500,700|Raleway:300,400,600');
 
-// @font-face {
-//   font-family: "Anderson_Grotesk";
-//   src: url("{{ site.url }}assets/fonts/AndersonGrotesk.otf") format("opentype");
-// }
+@font-face {
+   font-family: "Anderson_Grotesk";
+   src: url("fonts/AndersonGrotesk.otf") format("opentype");
+}
 
-$title-font: 'Signika', sans-serif;
-$content-font: 'Raleway', sans-serif;
+$font: 'Anderson_Grotesk', sans-serif;
