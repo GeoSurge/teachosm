@@ -17,7 +17,7 @@
     padding-top: 100px;
     padding-bottom: 50px;
     margin-bottom: 25px;
-    font-family: $title-font;
+    font-family: $font;
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
@@ -29,7 +29,7 @@
     padding-top: 400px;
     padding-bottom: 200px;
     margin-bottom: 25px;
-    font-family: $title-font;
+    font-family: $font;
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
@@ -103,14 +103,14 @@
 
 #contact::-webkit-input-placeholder {
   text-transform: uppercase;
-  font-family: $content-font;
+  font-family: $font;
   font-weight: 700;
   color: #bbb;
 }
 
 #contact:-moz-placeholder {
   text-transform: uppercase;
-  font-family: $content-font;
+  font-family: $font;
   font-weight: 700;
   color: #bbb;
 }
