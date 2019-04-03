@@ -4,7 +4,7 @@
   text-align: center;
   color: #fff;
   background-attachment: scroll;
-  background-image: url('/assets/images/hero.jpg');
+  background-image: url($baseurl + '/assets/images/hero.jpg');
   background-position: center center;
   background-repeat: none;
   -webkit-background-size: cover;
