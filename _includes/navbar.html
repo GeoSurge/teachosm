@@ -1,14 +1,14 @@
 <!-- <nav class="navbar">
   <div class="nav-wrapper">
-  <a href="{{site.url}}" class="brand-logo">TeachOSM</a>
+  <a href="{{site.baseurl}}" class="brand-logo">TeachOSM</a>
   <ul id="nav-mobile" class="right">
-    <li><a href="{{site.url}}/blog">Blog</a></li>
-    <li><a href="{{site.url}}/courses">Lessons</a></li>
+    <li><a href="{{site.baseurl}}/blog">Blog</a></li>
+    <li><a href="{{site.baseurl}}/courses">Projects</a></li>
   </ul>
   </div>
 </nav> -->
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top {% if page.title != 'home' %}navbar-shrink{% endif %}">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
@@ -22,23 +22,17 @@
         <img class="logo" src="{{site.baseurl}}/assets/images/logo.png" />
       </a>
 
-
-
-    <div class="horizontal-landing-page-menu">
-        <ul class="navbar-nav menu2 hidden-xs nav">
-          <li class="t-title"><a href="#about" class="page-scroll">About</a></li>
-          <li class="t-title"><a href="#calendar" class="page-scroll">Calendar</a></li>
-          <li class="t-title"><a href="#contact" class="page-scroll">Contact Us</a></li>
-        </ul>
-    </div>
-
-
+    {% if page.title == 'home' %}
+      <div class="horizontal-landing-page-menu">
+          <ul class="navbar-nav menu2 hidden-xs nav">
+            <li class="t-title"><a href="#about" class="page-scroll">About</a></li>
+            <li class="t-title"><a href="#calendar" class="page-scroll">Calendar</a></li>
+            <li class="t-title"><a href="#contact" class="page-scroll">Contact Us</a></li>
+          </ul>
+      </div>
+    {% endif %}
 
     </div>
-
-
-    
-
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -46,13 +40,13 @@
           <a href="#page-top"></a>
         </li>
         <li>
-          <a class="page-scroll" href="{{site.url}}/blog">Blog</a>
+          <a class="page-scroll" href="{{site.baseurl}}/blog">Blog</a>
         </li>
         <li>
-          <a class="page-scroll" href="{{site.url}}/lessons">Ed Portal</a>
+          <a class="page-scroll" href="{{site.baseurl}}/projects">Projects</a>
         </li>
         <li>
-          <a class="page-scroll" href="{{site.url}}/Resources">Resources</a>
+          <a class="page-scroll" href="{{site.baseurl}}/Resources">Resources</a>
         </li>
       </ul>
     </div>

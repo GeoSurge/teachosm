@@ -1,0 +1,139 @@
+.projects {
+  margin-top: 140px;
+  margin: 100px 32px;
+  overflow: hidden;
+
+  .projects-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .page-title {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    #project-search {
+      border-radius: 4px;
+      border: 1px solid $primary-color;
+      max-width: 400px;
+      padding: 8px;
+      width: 100%;
+      margin-left: 16px;
+
+      @media(max-width: $tablet-width) {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .project-list {
+    display: grid;
+    grid-auto-rows: 250px;
+    grid-gap: 16px 16px;
+    grid-template-columns: 1fr 1fr;
+
+    .project-card {
+      border-radius: 4px;
+      border: 2px solid $primary-color;
+      display: grid;
+      grid-gap: 8px 8px;
+      grid-template: 1fr 48px / repeat(6, 1fr);
+      padding: 16px;
+
+      img {
+        border-radius: 50%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+      }
+
+      .card-title {
+        grid-column: 2/4;
+        overflow: auto;
+
+        h1 {
+          font-size: 20px;
+          margin-top: 0;
+        }
+
+        h2 {
+          margin-top: 0;
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .card-description {
+        grid-column: 4/7;
+        font-size: 12px;
+        overflow: auto;
+      }
+
+      .card-tags {
+        grid-column: 2/5;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        p {
+          font-weight: bold;
+          margin: 0;
+        }
+
+        .card-tag {
+          border: 1px solid $primary-color;
+          color: $primary-color;
+          padding: 8px;
+          border-radius: 4px;
+          margin-left: 8px;
+        }
+      }
+
+      .card-button {
+        grid-column: 5/7;
+
+        a {
+          background: $secondary-color;
+          border-radius: 4px;
+          color: white;
+          display: block;
+          font-size: 14px;
+          font-weight: bold;
+          overflow: hidden;
+          padding: 12px;
+          text-align: center;
+          text-decoration: none;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &:hover {
+            color: $primary-color;
+            border: 2px solid $primary-color;
+            background: white;
+          }
+        }
+      }
+    }
+
+    @media(max-width: $tablet-width) {
+      grid-template-columns: 1fr;
+
+      .project-card {
+        .card-tags {
+          grid-column: 1/5;
+
+          font-size: 12px;
+        }
+
+        .card-button a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

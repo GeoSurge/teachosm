@@ -1,5 +1,5 @@
 $primary-color: #7EBC6F;
-$secondary-color: #90a4ae;
+$secondary-color: #222;
 $accent-color: #d500f9;
 
 @import url('https://fonts.googleapis.com/css?family=Signika:300,400,500,700|Raleway:300,400,600');
@@ -10,3 +10,6 @@ $accent-color: #d500f9;
 }
 
 $font: 'Anderson_Grotesk', sans-serif;
+
+$mobile-width: 600px;
+$tablet-width: 900px;
