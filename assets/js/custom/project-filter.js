@@ -1,31 +1,31 @@
 const DEFAULT_PROFILE_IMAGE = '/assets/images/default-profile.jpg';
 
-class LessonFilter {
-  constructor ({ lessons, lessonsElement, searchElement }) {
+class ProjectFilter {
+  constructor ({ projects, projectsElement, searchElement }) {
     this.searchElement = searchElement;
     this.search = "",
-    this.lessons = lessons;
-    this.lessonsElement = lessonsElement;
+    this.projects = projects;
+    this.projectsElement = projectsElement;
     this.addEventListener();
-    this.renderLessons();
+    this.renderProjects();
   }
 
-  get filteredLessons () {
+  get filteredProjects () {
     if (this.search) {
-      return this.lessons
+      return this.projects
         .filter(this.applySearch.bind(this));
       // TODO - add filters and tags here
     }
 
-    return this.lessons;
+    return this.projects;
   }
 
   addEventListener () {
     this.searchElement.on('input', event => this.updateSearch(event.target.value));
   }
 
-  applySearch (lesson) {
-    const { author, title, subtitle, tags } = lesson;
+  applySearch (project) {
+    const { author, title, subtitle, tags } = project;
     if (title.toLowerCase().includes(this.search)) return true;
     if (subtitle.toLowerCase().includes(this.search)) return true;
     if (author.name.toLowerCase().includes(this.search)) return true;
@@ -33,62 +33,62 @@ class LessonFilter {
     return false;
   }
 
-  lessonHtml (lesson) {
+  projectHtml (project) {
     const {
       author,
       description,
-      lessonTime,
+      projectTime,
       preparationTime,
       subtitle,
       tags,
       thumbnail,
       title,
       url,
-    } = lesson;
+    } = project;
 
     return `
-      <div class="lesson-card">
+      <div class="project-card">
         <img src="${author.image ? author.image : DEFAULT_PROFILE_IMAGE }" />
         <div class="card-title">
           <h1>${title}</h1>
           <h2>${subtitle}</h2>
           <p>${author.name}</p>
         </div>
-        <p class="card-description">${lesson.description}</p>
+        <p class="card-description">${project.description}</p>
         <div class="card-tags">
           <p>Tags:&nbsp;</p>
           ${tags.map(tag => `<span class="card-tag">${tag}</span>`)}
         </div>
         <div class="card-button">
-          <a href="${lesson.url}">Go to lesson</a>
+          <a href="${project.url}">Go to project</a>
         </div>
       </div>
     `;
   }
 
-  renderLessons () {
-    this.lessonsElement.empty();
-    this.filteredLessons.forEach(lesson => {
-      this.lessonsElement.append(this.lessonHtml(lesson));
+  renderProjects () {
+    this.projectsElement.empty();
+    this.filteredProjects.forEach(project => {
+      this.projectsElement.append(this.projectHtml(project));
     });
   }
 
   updateSearch (searchString) {
     this.search = searchString.toLowerCase();
-    this.renderLessons();
+    this.renderProjects();
   }
 }
 
-fetch('/lessons.json')
+fetch('/projects.json')
   .then(results => results.json())
   .then(results => {
-    const lessons = results.map(lesson => ({ ...lesson, tags: lesson.tags.split(', ') }));
-    const searchElement = $('#lesson-search');
-    const lessonsElement = $('.lesson-list');
+    const projects = results.map(project => ({ ...project, tags: project.tags.split(', ') }));
+    const searchElement = $('#project-search');
+    const projectsElement = $('.project-list');
 
-    new LessonFilter({
-      lessons,
-      lessonsElement,
+    new ProjectFilter({
+      projects,
+      projectsElement,
       searchElement,
     });
   });

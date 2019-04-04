@@ -6,8 +6,8 @@ author:
   name: "TeachOSM Contributors"
 thumbnail: "teachosm-for-high-school-0.png"
 preparation-time: 0
-lesson-time: 2
-lesson: ""
+project-time: 2
+project: ""
 url: "teachosm-for-high-school-0"
 tags:
   - "Mapping"

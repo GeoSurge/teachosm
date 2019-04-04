@@ -1,9 +1,9 @@
-.lessons {
+.projects {
   margin-top: 140px;
   margin: 100px 32px;
   overflow: hidden;
 
-  .lessons-title {
+  .projects-title {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
@@ -13,7 +13,7 @@
       margin: 0;
     }
 
-    #lesson-search {
+    #project-search {
       border-radius: 4px;
       border: 1px solid $primary-color;
       max-width: 400px;
@@ -27,13 +27,13 @@
     }
   }
 
-  .lesson-list {
+  .project-list {
     display: grid;
     grid-auto-rows: 250px;
     grid-gap: 16px 16px;
     grid-template-columns: 1fr 1fr;
 
-    .lesson-card {
+    .project-card {
       border-radius: 4px;
       border: 2px solid $primary-color;
       display: grid;
@@ -123,7 +123,7 @@
     @media(max-width: $tablet-width) {
       grid-template-columns: 1fr;
 
-      .lesson-card {
+      .project-card {
         .card-tags {
           grid-column: 1/5;
 

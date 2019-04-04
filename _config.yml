@@ -3,8 +3,8 @@ title: TeachOSM
 timezone: UTC
 collections_dir: collections
 collections:
-  lessons:
-    title: Lessons
+  projects:
+    title: Projects
     output: true
 markdown: kramdown
 theme: minima
