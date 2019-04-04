@@ -1,11 +1,17 @@
 ---
 title: TeachOSM
 timezone: UTC
-collections_dir: collections
 collections:
+  posts:
+    title: Posts
+    output: true
   projects:
     title: Projects
     output: true
+  uploads:
+    title: Uploads
+    output: true
+collections_dir: collections
 markdown: kramdown
 theme: minima
 plugins:
