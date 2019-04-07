@@ -1,4 +1,4 @@
-const DEFAULT_PROFILE_IMAGE = '/assets/images/default-profile.jpg';
+const DEFAULT_THUMBNAIL = '/assets/images/project-thumbnails/default-thumbnail.jpg';
 
 class ProjectFilter {
   constructor ({ projects, projectsElement, searchElement }) {
@@ -48,7 +48,7 @@ class ProjectFilter {
 
     return `
       <div class="project-card">
-        <img src="${author.image ? author.image : DEFAULT_PROFILE_IMAGE }" />
+        <img src="${thumbnail || DEFAULT_THUMBNAIL }" />
         <div class="card-title">
           <h1>${title}</h1>
           <h2>${subtitle}</h2>
@@ -57,7 +57,11 @@ class ProjectFilter {
         <p class="card-description">${project.description}</p>
         <div class="card-tags">
           <p>Tags:&nbsp;</p>
-          ${tags.map(tag => `<span class="card-tag">${tag}</span>`)}
+          ${
+            tags
+              .map(tag => `<span class="card-tag">${tag}</span>`)
+              .join('')
+          }
         </div>
         <div class="card-button">
           <a href="${project.url}">Go to project</a>

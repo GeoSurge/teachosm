@@ -13,7 +13,7 @@
       "author": {
         "name": "{{ project.author.name }}"
       },
-      "thumbnail": "{{ project.thumbnail }}",
+      "thumbnail": "{{ site.baseurl }}/assets/images/project-thumbnails/{{ project.thumbnail }}",
       "url": "{{ site.baseurl }}{{ project.url }}"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
