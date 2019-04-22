@@ -1,0 +1,62 @@
+---
+title: blog
+layout: default
+pagination:
+  enabled: true
+---
+
+<div class="blog-title">
+  <h1 class="page-title">Blog</h1>
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+{% endif %}
+
+<div class="blog-post-list">
+  {% for post in paginator.posts %}
+  <a href="{{ post.url }}">
+    <div class="blog-post-card">
+      <div class="left">
+        <div class="blog-post-card-title">{{ post.title }}</div>
+        <div class="blog-post-card-date">
+          {% assign month = post.date | date: "%b"  %}
+          {% assign day = post.date | date: "%-d"  %}
+          {% assign year = post.date | date: "%Y"  %}
+
+          {{ month }}
+          {% case day %}
+            {% when '1' or '21' or '31' %}{{ day }}st
+            {% when '2' or '22' %}{{ day }}nd
+            {% when '3' or '23' %}{{ day }}rd
+            {% else %}{{ day }}th
+          {% endcase %}
+          {{year}}
+        </div>
+        <div class="blog-post-card-author">{{ site.data.authors[post.author].name }}</div>
+      </div>
+      <div class="right">
+        <img class="blog-post-card-image" src="/assets/images/default-profile.jpg">
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+

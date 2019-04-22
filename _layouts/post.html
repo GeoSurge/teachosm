@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body data-spy="scroll" data-target=".navbar2" data-offset="450">
+    <div class="page">
+      {% include navbar.html %}
+      <div class="{{ page.title }} content">
+        {{ content }}
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
