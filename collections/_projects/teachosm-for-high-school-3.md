@@ -12,6 +12,7 @@ thumbnail: teachosm-for-high-school-3.png
 preparation-time: 1
 project-time: 2
 project: ''
+layout: project
 url: teachosm-for-high-school-3
 tags:
 - Mapping

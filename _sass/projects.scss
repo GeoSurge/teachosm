@@ -83,14 +83,6 @@
           font-weight: bold;
           margin: 0;
         }
-
-        .card-tag {
-          border: 1px solid $primary-color;
-          color: $primary-color;
-          padding: 8px;
-          border-radius: 4px;
-          margin-left: 8px;
-        }
       }
 
       .card-button {
@@ -135,4 +127,12 @@
       }
     }
   }
+}
+
+.card-tag {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  padding: 8px;
+  border-radius: 4px;
+  margin-left: 8px;
 }

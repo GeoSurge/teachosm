@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body data-spy="scroll" data-target=".navbar2" data-offset="450">
+    <div class="page">
+      {% include navbar.html %}
+      <content class="project-content">
+        <img src="/assets/images/project-thumbnails/{{ page.thumbnail }}" />
+        <header class="project-title">
+          <h1>{{ page.title }}</h1>
+          <h3>{{ page.subtitle }}</h3>
+          <p>{{ page.author.name }}</p>
+        </header>
+        <div class="project-filters">
+
+        </div>
+        <div class="project-tags">
+          <p>Tags:&nbsp;</p>
+          {% for tag in page.tags %}
+            <span class="card-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <p class="project-description">{{ page.description }}</p>
+        <div class="project-buttons">
+          <a class="download-button" href="#">Download Project</a>
+        </div>
+      </content>
+    </div>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>
