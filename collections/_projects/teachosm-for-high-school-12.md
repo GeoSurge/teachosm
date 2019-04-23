@@ -5,6 +5,9 @@ description: In this module, teachers will learn to plan and execute an in class
 author:
   name: TeachOSM and OpenStreetMap contributors
 thumbnail: teachosm-for-high-school-12.png
+type: 0
+audience: 3
+difficulty: 0
 preparation-time: 0
 project-time: 2
 project: ''

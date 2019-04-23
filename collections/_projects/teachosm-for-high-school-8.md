@@ -5,6 +5,9 @@ description: In this module, students will map road map features associated with
 author:
   name: TeachOSM Contributors
 thumbnail: teachosm-for-high-school-8.jpg
+type: 0
+audience: 3
+difficulty: 0
 preparation-time: 0
 project-time: 2
 project: ''

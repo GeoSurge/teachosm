@@ -5,6 +5,9 @@ description: This module organizes introductory level OpenStreetMap (OSM) resour
 author:
   name: OpenStreetMap Contributors
 thumbnail: teachosm-for-high-school-9.png
+type: 0
+audience: 3
+difficulty: 0
 preparation-time: 0
 project-time: 2
 project: ''

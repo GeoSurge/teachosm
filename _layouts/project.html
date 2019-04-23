@@ -12,7 +12,73 @@
           <p>{{ page.author.name }}</p>
         </header>
         <div class="project-filters">
-
+          <h3>Project Type:</h3>
+          <p>
+            {% case page.type %}
+              {% when 0 %}
+              Desktop
+              {% when 1 %}
+              Field
+              {% when 2 %}
+              Mobile
+            {% endcase %}
+          </p>
+          <h3>Audience:</h3>
+          <p>
+            {% case page.audience %}
+              {% when 0 %}
+              Primary
+              {% when 1 %}
+              High School / Secondary
+              {% when 2 %}
+              Community College
+              {% when 3 %}
+              University
+              {% when 4 %}
+              Other
+            {% endcase %}
+          </p>
+          <h3>Difficulty:</h3>
+          <p>
+            {% case page.difficulty %}
+              {% when 0 %}
+              Beginner
+              {% when 1 %}
+              Intermediate
+              {% when 2 %}
+              Advanced
+            {% endcase %}
+          </p>
+          <h3>Educator Preparation Time:</h3>
+          <p>
+            {% case page.preparation-time %}
+              {% when 0 %}
+              < 1 hour
+              {% when 1 %}
+              1 hour
+              {% when 2 %}
+              2 - 4 hours
+              {% when 3 %}
+              1 day
+              {% when 4 %}
+              > 1 day
+            {% endcase %}
+          </p>
+          <h3>Education Activity Duration:</h3>
+          <p>
+            {% case page.project-time %}
+              {% when 0 %}
+              < 1 hour
+              {% when 1 %}
+              1 hour
+              {% when 2 %}
+              2 - 4 hours
+              {% when 3 %}
+              1 day
+              {% when 4 %}
+              > 1 day
+            {% endcase %}
+          </p>
         </div>
         <div class="project-tags">
           <p>Tags:&nbsp;</p>
