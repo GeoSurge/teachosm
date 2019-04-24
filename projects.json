@@ -8,8 +8,11 @@
       "subtitle": "{{ project.subtitle | escape }}",
       "description": "{{ project.description | escape }}",
       "tags": "{{ project.tags | join: ', ' }}",
-      "preparationTime": "{{ project.preparation-time }}",
-      "projectTime": "{{ project.project-time }}",
+      "type": "{{ project.type }}",
+      "audience": "{{ project.audience }}",
+      "difficulty": "{{ project.difficulty }}",
+      "preparation-time": "{{ project.preparation-time }}",
+      "project-time": "{{ project.project-time }}",
       "author": {
         "name": "{{ project.author.name }}"
       },

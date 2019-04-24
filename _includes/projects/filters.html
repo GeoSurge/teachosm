@@ -1,0 +1,22 @@
+<div class="project-filters">
+  <header>
+    <h1>Filters</h1>
+    <button class="project-filter-close">x</button>
+  </header>
+  <section class="project-filter-list">
+    {% for filter in site.filters %}
+      <div class="project-filter {{ filter.name }}">
+        <h3>{{ filter.title }}</h3>
+        {% for option in filter.options %}
+          <div class="project-filter-option">
+            <input type="checkbox" value="{{ filter.name }}::{{ option.value }}" />
+            <label for="{{ option.value }}">{{ option.name }}</label>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+  <section>
+
+  </section>
+</div>
