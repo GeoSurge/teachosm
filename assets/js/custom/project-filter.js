@@ -1,36 +1,64 @@
 const DEFAULT_THUMBNAIL = '/assets/images/project-thumbnails/default-thumbnail.jpg';
 
 class ProjectFilter {
-  constructor ({ projects, projectsElement, searchElement }) {
+  constructor ({ filterElements, filterOptions, projects, projectsElement, searchElement }) {
+    this.filterElements = filterElements;
+    this.filterOptions = filterOptions;
+    this.filters = {};
+    filterOptions.forEach(option => this.filters[option.name] = []);
     this.searchElement = searchElement;
     this.search = "",
     this.projects = projects;
     this.projectsElement = projectsElement;
-    this.addEventListener();
+    this.addEventListeners();
     this.renderProjects();
   }
 
   get filteredProjects () {
-    if (this.search) {
-      return this.projects
-        .filter(this.applySearch.bind(this));
-      // TODO - add filters and tags here
-    }
-
-    return this.projects;
+    return this.projects
+      .filter(this.applySearch.bind(this))
+      .filter(this.applyFilters.bind(this));
+      // TODO - add tags here
   }
 
-  addEventListener () {
+  addEventListeners () {
+    const self = this;
     this.searchElement.on('input', event => this.updateSearch(event.target.value));
+    this.filterElements.forEach(element => {
+      element.find('input').change(function () {
+        if (this.checked) self.addFilter(this.value);
+        else self.removeFilter(this.value);
+      });
+    })
+  }
+
+  addFilter (item) {
+    const [filterName, value] = item.split('::');
+    this.filters[filterName].push(value);
+    this.renderProjects();
   }
 
   applySearch (project) {
+    if (!this.search) return true;
     const { author, title, subtitle, tags } = project;
     if (title.toLowerCase().includes(this.search)) return true;
     if (subtitle.toLowerCase().includes(this.search)) return true;
     if (author.name.toLowerCase().includes(this.search)) return true;
     if (tags.some(tag => tag.toLowerCase().includes(this.search))) return true;
     return false;
+  }
+
+  applyFilters (project) {
+    let passes = true;
+    Object.keys(this.filters).forEach(key => {
+      const filter = this.filters[key];
+      if (filter.length) {
+        if (!filter.includes(project[key])) {
+          passes = false;
+        }
+      }
+    });
+    return passes;
   }
 
   projectHtml (project) {
@@ -64,10 +92,17 @@ class ProjectFilter {
           }
         </div>
         <div class="card-button">
-          <a href="${project.url}">Go to project</a>
+          <a class="primary-button" href="${project.url}">Go to project</a>
         </div>
       </div>
     `;
+  }
+
+  removeFilter (item) {
+    const [filterName, value] = item.split('::');
+    const options = this.filters[filterName];
+    this.filters[filterName] = options.filter(option => option !== value);
+    this.renderProjects();
   }
 
   renderProjects () {
@@ -90,9 +125,20 @@ fetch('/projects.json')
     const searchElement = $('#project-search');
     const projectsElement = $('.project-list');
 
-    new ProjectFilter({
-      projects,
-      projectsElement,
-      searchElement,
-    });
+    fetch('/filters.json')
+      .then(filterOptions => filterOptions.json())
+      .then(filterOptions => {
+        const filterElements = filterOptions.map(filter => $(`.project-filter.${filter.name}`));
+        new ProjectFilter({
+          filterElements,
+          filterOptions,
+          projects,
+          projectsElement,
+          searchElement,
+        });
+
+        // ability to toggle filter panel in/out
+        $('.project-filter-button').click(() => $('.project-filters').addClass('open'));
+        $('.project-filter-close').click(() => $('.project-filters').removeClass('open'));
+      });
   });

@@ -13,3 +13,24 @@ $font: 'Anderson_Grotesk', sans-serif;
 
 $mobile-width: 600px;
 $tablet-width: 900px;
+
+.primary-button {
+  background: $secondary-color;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    background: white;
+  }
+}
