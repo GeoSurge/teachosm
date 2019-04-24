@@ -42,7 +42,6 @@
       padding: 16px;
 
       img {
-        border-radius: 50%;
         height: auto;
         margin: 0 auto;
         text-align: center;
@@ -83,14 +82,6 @@
         p {
           font-weight: bold;
           margin: 0;
-        }
-
-        .card-tag {
-          border: 1px solid $primary-color;
-          color: $primary-color;
-          padding: 8px;
-          border-radius: 4px;
-          margin-left: 8px;
         }
       }
 
@@ -136,4 +127,12 @@
       }
     }
   }
+}
+
+.card-tag {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  padding: 8px;
+  border-radius: 4px;
+  margin-left: 8px;
 }

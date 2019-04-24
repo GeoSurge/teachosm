@@ -7,9 +7,13 @@ description: Students will map cultural patterns and processes features anywhere
 author:
   name: OpenStreetMap Contributors
 thumbnail: teachosm-for-high-school-6.png
+type: 0
+audience: 3
+difficulty: 0
 preparation-time: 2
 project-time: 1
 project: ''
+layout: project
 url: teachosm-for-high-school-6
 tags:
 - Mapping
