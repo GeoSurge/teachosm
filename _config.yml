@@ -2,14 +2,15 @@
 title: TeachOSM
 timezone: UTC
 collections:
+  filters:
+    title: Filters
+    output: false
   posts:
     title: Posts
     output: true
   projects:
     title: Projects
     output: true
-  filters:
-    title: Filters
   uploads:
     title: Uploads
     output: true
