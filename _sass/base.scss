@@ -9,10 +9,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html body {
-  width: 100%;
+  font-family: $font, sans-serif;
   height: 100%;
   margin: 0;
-  font-family: $font, sans-serif;
+  width: 100%;
 
   .page {
     height: 100%;
@@ -48,5 +48,6 @@ section {
 @import 'home';
 @import 'cal';
 @import 'blog';
+@import 'project';
 @import 'projects';
 @import 'footer';

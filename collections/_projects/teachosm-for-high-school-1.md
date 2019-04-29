@@ -6,9 +6,13 @@ description: Students work in groups to map a section of a property using OSM-av
 author:
   name: TeachOSM Contributors
 thumbnail: teachosm-for-high-school-1.png
+type: 0
+audience: 3
+difficulty: 0
 preparation-time: 1
 project-time: 2
 project: ''
+layout: project
 url: teachosm-for-high-school-1
 tags:
 - Mapping

@@ -6,9 +6,13 @@ description: This module introduces the iD Editor for OpenStreetMap and how to u
 author:
   name: TeachOSM and OpenStreetMap Contributors
 thumbnail: teachosm-for-high-school-4.png
+type: 0
+audience: 3
+difficulty: 0
 preparation-time: 1
 project-time: 2
 project: ''
+layout: project
 url: teachosm-for-high-school-4
 tags:
 - Mapping
