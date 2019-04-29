@@ -1,8 +1,10 @@
 ---
+title: Sailing at the 1988 Summer Olympics
+date: 2016-11-21 18:16:49 Z
+categories:
+- collections
+- wikipedia
 layout: post
-title:  Sailing at the 1988 Summer Olympics
-date:   2016-11-21 19:16:49 +0100
-categories: wikipedia
 author: maggie_cawley
 ---
 

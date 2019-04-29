@@ -17,26 +17,19 @@ collections:
 collections_dir: collections
 markdown: kramdown
 theme: minima
-
 plugins:
 - jekyll-feed
 - jekyll-paginate-v2
-
 include:
 - pages
-
-# Pagination Settings
-# from https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 pagination:
-  collection: 'posts'
+  collection: posts
   debug: true
   enabled: true
   per_page: 4
-  permalink: '/page/:num/'
-  title: ':title - page :num'
+  permalink: "/page/:num/"
+  title: ":title - page :num"
   limit: 0
-  sort_field: 'date'
+  sort_field: date
   sort_reverse: true
-
-# Produces a cleaner folder structure when using categories
-permalink: /:year/:month/:title.html
+permalink: "/:year/:month/:title.html"

@@ -1,8 +1,10 @@
 ---
+title: Columbia River
+date: 2016-11-26 18:16:49 Z
+categories:
+- collections
+- wikipedia
 layout: post
-title:  Columbia River
-date:   2016-11-26 19:16:49 +0100
-categories: wikipedia
 ---
 
 _From Wikipedia, the free encyclopedia_

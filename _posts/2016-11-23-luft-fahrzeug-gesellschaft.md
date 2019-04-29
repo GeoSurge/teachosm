@@ -1,8 +1,10 @@
 ---
+title: Luft-Fahrzeug-Gesellschaft
+date: 2016-11-23 18:16:49 Z
+categories:
+- collections
+- wikipedia
 layout: post
-title:  Luft-Fahrzeug-Gesellschaft
-date:   2016-11-23 19:16:49 +0100
-categories: wikipedia
 ---
 
 Luft-Fahrzeug-Gesellschaft, also referred to as LFG, was a German aircraft manufacturer during World War I. They are best known for their various "Roland" designs, notably the Roland C.II Walfisch (whale), Roland D.II haifisch (Shark) and Roland D.VI, although they also produced a number of airships and many experimental designs.

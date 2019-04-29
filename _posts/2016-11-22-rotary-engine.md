@@ -1,8 +1,10 @@
 ---
+title: Rotary engine
+date: 2016-11-22 18:16:49 Z
+categories:
+- collections
+- wikipedia
 layout: post
-title:  Rotary engine
-date:   2016-11-22 19:16:49 +0100
-categories: wikipedia
 author: shawn_goulet
 ---
 

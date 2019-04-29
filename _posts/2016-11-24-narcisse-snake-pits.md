@@ -1,8 +1,10 @@
 ---
+title: Narcisse Snake Pits
+date: 2016-11-24 18:16:49 Z
+categories:
+- collections
+- wikipedia
 layout: post
-title:  Narcisse Snake Pits
-date:   2016-11-24 19:16:49 +0100
-categories: wikipedia
 ---
 
 _From Wikipedia, the free encyclopedia_
