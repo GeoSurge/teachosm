@@ -1,37 +1,43 @@
 ---
 title: blog
+permalink: "/blog"
 layout: default
 pagination:
   enabled: true
+
 ---
 
 <div class="blog-title">
-  <h1 class="page-title">Blog</h1>
+  <h1 class="page-title">Blog Posts</h1>
 </div>
 
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
+      <div class="fa fa-chevron-left" title="previous"></div>
     </a>
   {% else %}
-    <span class="previous">Previous</span>
+      <div class="fa fa-chevron-left" title="previous"></div>
   {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  <span class="page_number">
+    Page <input onClick="this.setSelectionRange(0, this.value.length)" class="pagination-number" type="text" value="{{ paginator.page }}"> of {{ paginator.total_pages }}
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="next">
+      <div class="fa fa-chevron-right" title="next"></div>
+    </a>
   {% else %}
-    <span class="next ">Next</span>
+    <span class="next">
+      <div class="fa fa-chevron-right" title="next"></div>
+    </span>
   {% endif %}
 </div>
 {% endif %}
 
 <div class="blog-post-list">
   {% for post in paginator.posts %}
-  <a href="{{ post.url }}">
+  <a href="{{ post.url }}" class="blog-post-card-wrapper">
     <div class="blog-post-card">
       <div class="left">
         <div class="blog-post-card-title">{{ post.title }}</div>
@@ -49,7 +55,7 @@ pagination:
           {% endcase %}
           {{year}}
         </div>
-        <div class="blog-post-card-author">{{ site.data.authors[post.author].name }}</div>
+        <div class="blog-post-card-author">{{ site.data.author }}</div>
       </div>
       <div class="right">
         <img class="blog-post-card-image" src="/assets/images/default-profile.jpg">
@@ -60,3 +66,16 @@ pagination:
 </div>
 
 
+<script>
+  document.querySelector(".pagination-number").addEventListener('keydown', function(event) {
+    var newPageNumber = event.target.value;
+    var code = (event.keyCode ? event.keyCode : event.which);
+    if (code == 13) {
+      var newUrl = window.location.origin + "/blog";
+      if (newPageNumber > 1) {
+        newUrl += "/page/" + newPageNumber;
+      }
+      window.open(newUrl, "_self");
+    }
+  });
+</script>
