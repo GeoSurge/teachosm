@@ -128,7 +128,7 @@
   overflow-y: auto;
   padding: 24px;
   position: fixed;
-  right: -750px;
+  right: -100vw;
   transition: right 0.5s;
   width: 650px;
   z-index: 5000;
@@ -183,7 +183,7 @@
   }
 
   @media(max-width: $tablet-width) {
+    height: calc(100% - 62px);
     width: 100%;
   }
-
 }

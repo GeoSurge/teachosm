@@ -16,7 +16,5 @@ project: ''
 layout: project
 url: teachosm-for-high-school-0
 tags:
-- Mapping
-- GIS
 ---
 
