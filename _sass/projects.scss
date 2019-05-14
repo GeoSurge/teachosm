@@ -35,11 +35,11 @@
     display: grid;
     grid-auto-rows: 250px;
     grid-gap: 16px 16px;
-    grid-template-columns: 1fr 1fr;
 
     .project-card {
       border-radius: 4px;
       border: 2px solid $primary-color;
+      box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
       display: grid;
       grid-gap: 8px 8px;
       grid-template: 1fr 48px / repeat(6, 1fr);
@@ -84,8 +84,16 @@
         font-size: 14px;
 
         p {
+          max-width: 200px;
           font-weight: bold;
           margin: 0;
+        }
+
+        .card-tag {
+          max-width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
 
@@ -186,4 +194,8 @@
     height: calc(100% - 62px);
     width: 100%;
   }
+}
+
+.project-add-button {
+  margin-left: 16px;
 }
