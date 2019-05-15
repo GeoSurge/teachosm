@@ -1,0 +1,46 @@
+---
+title: add-project
+permalink: "/projects/add"
+layout: default
+---
+
+<h1 class="page-title">Add Project</h1>
+<form id="add-project-form" action="#">
+  <div>
+    <h1>User Information</h1>
+    <section>
+      <label for="firstName">First name *</label>
+      <input id="firstName" name="firstName" type="text" class="required">
+      <label for="lastName">Last name *</label>
+      <input id="lastName" name="lastName" type="text" class="required">
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="text" class="required email">
+      <label for="confirmEmail">Confirm email *</label>
+      <input id="confirmEmail" name="confirmEmail" type="text" class="required email">
+    </section>
+    <h1>Project Information</h1>
+    <section>
+      <label for="projectTitle">Title *</label>
+      <input id="projectTitle" name="projectTitle" type="text" class="required">
+      <label for="projectSubtitle">Subtitle</label>
+      <input id="projectSubtitle" name="projectSubtitle" type="text">
+      <label for="projectDescription">Description</label>
+      <textarea id="projectDescription" name="projectDescription"></textarea>
+    </section>
+    <h1>Filters and Tags</h1>
+    <section>
+      {% for filter in site.filters %}
+        <h3>{{ filter.title }} *</h3>
+        {% for option in filter.options %}
+          <input id="{{ filter.name }}::{{ option.name }}" type="radio" name="{{ filter.name }}" value="{{ option.value }}" class="required" />
+          <label for="{{ filter.name }}::{{ option.name }}">{{ option.name }}</label>
+          <br />
+        {% endfor %}
+    {% endfor %}
+    </section>
+    <h1>Finish and Submit</h1>
+    <section>
+      Any final information should be placed here...
+    </section>
+  </div>
+</form>

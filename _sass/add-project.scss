@@ -1,0 +1,24 @@
+.add-project {
+  margin: 125px 32px;
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  form {
+    section {
+      overflow: auto;
+      width: 100%;
+
+      textarea {
+        display: block;
+        height: 250px;
+        width: 500px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -15,7 +15,6 @@ project: ''
 layout: project
 url: teachosm-for-high-school-9
 tags:
-- Mapping
-- GIS
+- Industrialization and Economic Development
 ---
 

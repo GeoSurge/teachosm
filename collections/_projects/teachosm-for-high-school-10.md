@@ -14,7 +14,6 @@ project: ''
 layout: project
 url: teachosm-for-high-school-10
 tags:
-- Mapping
-- GIS
+- Cities and Urban Land Use
 ---
 

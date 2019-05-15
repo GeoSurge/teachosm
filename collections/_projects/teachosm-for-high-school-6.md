@@ -16,7 +16,6 @@ project: ''
 layout: project
 url: teachosm-for-high-school-6
 tags:
-- Mapping
-- GIS
+- Cultural Patterns and Processes
 ---
 

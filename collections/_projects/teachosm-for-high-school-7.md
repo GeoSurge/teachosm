@@ -18,7 +18,6 @@ project: ''
 layout: project
 url: teachosm-for-high-school-7
 tags:
-- Mapping
-- GIS
+- Political Organization of Space
 ---
 

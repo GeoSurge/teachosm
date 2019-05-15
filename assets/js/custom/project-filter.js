@@ -1,11 +1,14 @@
 const DEFAULT_THUMBNAIL = '/assets/images/project-thumbnails/default-thumbnail.jpg';
 
 class ProjectFilter {
-  constructor ({ filterElements, filterOptions, projects, projectsElement, searchElement }) {
+  constructor ({ filterElements, filterOptions, projects, projectsElement, searchElement, tagOptions, tagsElement }) {
     this.filterElements = filterElements;
     this.filterOptions = filterOptions;
     this.filters = {};
     filterOptions.forEach(option => this.filters[option.name] = []);
+    this.tagsElement = tagsElement;
+    this.tagOptions = tagOptions;
+    this.tags = [];
     this.searchElement = searchElement;
     this.search = "",
     this.projects = projects;
@@ -17,8 +20,8 @@ class ProjectFilter {
   get filteredProjects () {
     return this.projects
       .filter(this.applySearch.bind(this))
-      .filter(this.applyFilters.bind(this));
-      // TODO - add tags here
+      .filter(this.applyFilters.bind(this))
+      .filter(this.applyTags.bind(this));
   }
 
   addEventListeners () {
@@ -30,6 +33,7 @@ class ProjectFilter {
         else self.removeFilter(this.value);
       });
     })
+    this.tagsElement.on('change', event => this.updateTags(event.target.value));
   }
 
   addFilter (item) {
@@ -59,6 +63,12 @@ class ProjectFilter {
       }
     });
     return passes;
+  }
+
+  applyTags (project) {
+    if (!this.tags.length) return true;
+    if (project.tags.some(tag => this.tags.includes(tag))) return true;
+    return false;
   }
 
   projectHtml (project) {
@@ -116,29 +126,54 @@ class ProjectFilter {
     this.search = searchString.toLowerCase();
     this.renderProjects();
   }
+
+  updateTags (tagsString) {
+    this.tags = tagsString.split(',').filter(Boolean);
+    this.renderProjects();
+  }
 }
 
-fetch('/projects.json')
-  .then(results => results.json())
-  .then(results => {
-    const projects = results.map(project => ({ ...project, tags: project.tags.split(', ') }));
-    const searchElement = $('#project-search');
-    const projectsElement = $('.project-list');
+Promise.all([
+  fetch('/projects.json'),
+  fetch('/filters.json'),
+  fetch('/tags.json')
+]).then(([
+  projectsResponse,
+  filtersResponse,
+  tagsResponse
+]) => {
+  Promise.all([
+    projectsResponse.json(),
+    filtersResponse.json(),
+    tagsResponse.json()
+  ]).then(([
+    projects,
+    filterOptions,
+    tagOptions
+  ]) => {
+    // initialize tag selector
+    const tagsElement = $('#tags-selector').selectize({
+      create: false,
+      delimiter: ',',
+      labelField: 'value',
+      options: tagOptions.map(tag => ({ value: tag })),
+      persist: false,
+      searchField: ['value'],
+      valueField: 'value',
+    });
 
-    fetch('/filters.json')
-      .then(filterOptions => filterOptions.json())
-      .then(filterOptions => {
-        const filterElements = filterOptions.map(filter => $(`.project-filter.${filter.name}`));
-        new ProjectFilter({
-          filterElements,
-          filterOptions,
-          projects,
-          projectsElement,
-          searchElement,
-        });
+    new ProjectFilter({
+      filterElements: filterOptions.map(filter => $(`.project-filter.${filter.name}`)),
+      filterOptions,
+      projects: projects.map(project => ({ ...project, tags: project.tags.split(', ').filter(Boolean) })),
+      projectsElement: $('.project-list'),
+      searchElement: $('#project-search'),
+      tagOptions,
+      tagsElement,
+    });
 
-        // ability to toggle filter panel in/out
-        $('.project-filter-button').click(() => $('.project-filters').addClass('open'));
-        $('.project-filter-close').click(() => $('.project-filters').removeClass('open'));
-      });
+    // ability to toggle filter panel in/out
+    $('.project-filter-button').click(() => $('.project-filters').addClass('open'));
+    $('.project-filter-close').click(() => $('.project-filters').removeClass('open'));
   });
+});
