@@ -32,4 +32,4 @@ pagination:
   limit: 0
   sort_field: date
   sort_reverse: true
-permalink: "/:year/:month/:title.html"
+permalink: "/:collection/:year/:month/:title.html"

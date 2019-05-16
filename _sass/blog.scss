@@ -104,3 +104,21 @@
     }
   }
 }
+
+.blog-post {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom: 75px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 150px;
+
+  .blog-post-title {
+    font-size: 45px;
+  }
+
+  .blog-post-author {
+    color: rgb(50, 50, 50);
+    font-size: 12pt;
+  }
+}
