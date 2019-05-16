@@ -8,9 +8,14 @@
         <div class="blog-post-title">
           {{ page.title}}
         </div>
-        <div class="blog-post-author">
-          {{ page.author }}
-        </div>
+        <span class="blog-post-by-line">
+          <span>By </span>
+          <span class="blog-post-author">{{ page.author }}</span>
+        </span>
+        <span class="blog-post-bullet">&nbsp;&#8226;&nbsp;</span>
+        <span class="blog-post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+        </br>
+        </br>
         </br>
         {{ content }}
       </div>

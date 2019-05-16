@@ -117,8 +117,25 @@
     font-size: 45px;
   }
 
+  .blog-post-by-line {
+    color: #5b616b;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
   .blog-post-author {
     color: rgb(50, 50, 50);
-    font-size: 12pt;
+  }
+
+  .blog-post-bullet {
+    color: #5b616b;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  .blog-post-date {
+    color: #5b616b;
+    font-size: 1.4rem;
+    font-weight: normal;
   }
 }
