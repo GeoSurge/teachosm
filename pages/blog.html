@@ -10,6 +10,7 @@ pagination:
   <h1 class="page-title">Blog Posts</h1>
 </div>
 
+{% comment %}
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
@@ -33,9 +34,9 @@ pagination:
   {% endif %}
 </div>
 {% endif %}
-
+{% endcomment %}
 <div class="blog-post-list">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
   <a href="{{ post.url }}" class="blog-post-card-wrapper">
     <div class="blog-post-card">
       <div class="left">
@@ -54,7 +55,7 @@ pagination:
           {% endcase %}
           {{year}}
         </div>
-        <div class="blog-post-card-author">{{ site.data.author }}</div>
+        <div class="blog-post-card-author">{{ post.author }}</div>
       </div>
       <div class="right">
         <img class="blog-post-card-image" src="/assets/images/default-profile.jpg">
@@ -64,7 +65,7 @@ pagination:
   {% endfor %}
 </div>
 
-
+<!--
 <script>
   document.querySelector(".pagination-number").addEventListener('keydown', function(event) {
     var newPageNumber = event.target.value;
@@ -78,3 +79,4 @@ pagination:
     }
   });
 </script>
+-->
