@@ -12,8 +12,14 @@
 
       textarea {
         display: block;
-        height: 250px;
-        width: 500px;
+        height: 150px;
+        width: 100%;
+
+        &.error {
+          background: rgb(251, 227, 228);
+          border: 1px solid #fbc2c4;
+          color: #8a1f11;
+        }
       }
 
       h3 {
@@ -21,4 +27,58 @@
       }
     }
   }
+}
+
+.top-margin {
+  margin-top: 16px;
+}
+
+.uploadable {
+  height: 150px;
+  position: relative;
+  width: 100%;
+
+  input {
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  label {
+    background: rgba($primary-color, .2);
+    border: 2px dashed $primary-color;
+    color: $primary-color;
+    cursor: pointer;
+    display: flex !important;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+
+    &#projectImage-error, &#projectFile-error {
+      background: none !important;
+      border: none !important;
+      font-size: 16px !important;
+      height: auto !important;
+      position: absolute !important;
+      right: 0 !important;
+      top: -30px !important;
+      width: auto !important;
+    }
+
+    .fa {
+      color: $primary-color;
+      font-size: 32px;
+    }
+  }
+}
+
+.selectize-dropdown {
+  z-index: 9999;
 }
