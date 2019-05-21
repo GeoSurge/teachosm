@@ -17,7 +17,7 @@ collections:
 collections_dir: collections
 markdown: kramdown
 theme: minima
-plugins:
+#plugins:
 #- jekyll-feed
 #- jekyll-paginate-v2
 include:
