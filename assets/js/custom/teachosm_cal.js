@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $('#insert-calendar').fullCalendar({
-        googleCalendarApiKey: 'AIzaSyBPJJ7VIyVSY6gc6wtYtS2XLWJmoBttEG8',
+        googleCalendarApiKey: 'AIzaSyAiBpmAV3m9Y_1BkFL8nIArU2q_KnugXOU',
         events: {
-            googleCalendarId: 'qj09h89scmae2gjb13297a16rc@group.calendar.google.com',
+            googleCalendarId: 'teachosm@gmail.com',
             color: 'none',   // an option!
             textColor: 'white' // an option!
         },
