@@ -1,4 +1,7 @@
-const DEFAULT_THUMBNAIL = '/assets/images/project-thumbnails/default-thumbnail.jpg';
+---
+---
+
+const DEFAULT_THUMBNAIL = '{{site.baseurl}}/assets/images/project-thumbnails/default-thumbnail.jpg';
 
 class ProjectFilter {
   constructor ({ filterElements, filterOptions, projects, projectsElement, searchElement, tagOptions, tagsElement }) {
@@ -134,9 +137,9 @@ class ProjectFilter {
 }
 
 Promise.all([
-  fetch('/projects.json'),
-  fetch('/filters.json'),
-  fetch('/tags.json')
+  fetch('{{site.baseurl}}/projects.json'),
+  fetch('{{site.baseurl}}/filters.json'),
+  fetch('{{site.baseurl}}/tags.json')
 ]).then(([
   projectsResponse,
   filtersResponse,
