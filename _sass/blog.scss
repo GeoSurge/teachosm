@@ -104,3 +104,38 @@
     }
   }
 }
+
+.blog-post {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom: 75px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 150px;
+
+  .blog-post-title {
+    font-size: 45px;
+  }
+
+  .blog-post-by-line {
+    color: #5b616b;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  .blog-post-author {
+    color: rgb(50, 50, 50);
+  }
+
+  .blog-post-bullet {
+    color: #5b616b;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  .blog-post-date {
+    color: #5b616b;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+}

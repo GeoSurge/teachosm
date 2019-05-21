@@ -17,8 +17,8 @@ collections:
 collections_dir: collections
 markdown: kramdown
 theme: minima
-#plugins:
-#- jekyll-feed
+plugins:
+- jekyll-feed
 #- jekyll-paginate-v2
 include:
 - pages
@@ -32,4 +32,4 @@ pagination:
   limit: 0
   sort_field: date
   sort_reverse: true
-permalink: "/:year/:month/:title.html"
+permalink: "/:collection/:year/:month/:title.html"
