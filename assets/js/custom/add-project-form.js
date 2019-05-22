@@ -41,6 +41,32 @@ const initializeForm = () => {
   form.removeClass('hidden');
 }
 
+let tags;
+const setTags = tagsString => {
+  tags = tagsString.split(',');
+}
+
+let projectImage;
+const setProjectImage = image => {
+  const reader = new FileReader();
+  reader.onloadend = () => {
+    projectImage = reader.result;
+    $('#projectImageLabel').html('<i class="fa fa-check"></i><br />Image Uploaded!');
+  }
+  reader.readAsDataURL(image);
+};
+
+let projectFile;
+const setProjectFile = file => {
+  const reader = new FileReader();
+  reader.onloadend = () => {
+    projectFile = reader.result;
+    $('#projectFileLabel').html('<i class="fa fa-check"></i><br />File Uploaded!');
+  }
+  reader.readAsDataURL(file);
+};
+
+
 fetch('/tags.json')
   .then(response => response.json())
   .then(tags => {
@@ -56,5 +82,10 @@ fetch('/tags.json')
       valueField: 'value',
     });
 
-    tagSelector.on('change', event => console.log('tag: ', event.target.value));
+    const projectImageSelector = $('#projectImage');
+    const projectFileSelector = $('#projectFile');
+
+    tagSelector.on('change', event => setTags(event.target.value));
+    projectImageSelector.on('change', event => setProjectImage(event.target.files[0]));
+    projectFileSelector.on('change', event => setProjectFile(event.target.files[0]));
   });

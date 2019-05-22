@@ -6,24 +6,90 @@
   }
 
   form {
-    section {
-      overflow: auto;
-      width: 100%;
+    // jquery-steps css overwrite
+    .wizard {
 
-      textarea {
-        display: block;
-        height: 150px;
-        width: 100%;
+      > .steps {
 
-        &.error {
-          background: rgb(251, 227, 228);
-          border: 1px solid #fbc2c4;
-          color: #8a1f11;
+        > ul {
+          display: flex;
+
+          > li a {
+            padding: 16px;
+          }
+
+          @media (max-width: $tablet-width) {
+            flex-direction: column;
+
+            > li {
+              width: 100%;
+            }
+          }
+        }
+
+        a, a:hover, a:active {
+
+        }
+
+        .disabled {
+          a, a:hover, a:active {
+
+          }
+        }
+        .current {
+          a, a:hover, a:active {
+            background: $primary-color;
+          }
+        }
+        .done {
+          a, a:hover, a:active {
+            background: rgba($primary-color, .75);
+          }
+        }
+        .error {
+          a, a:hover, a:active {
+
+          }
         }
       }
 
-      h3 {
-        font-size: 18px;
+      > .content {
+        > section {
+          overflow: auto;
+          width: 100%;
+
+          input[type='text'] {
+            width: 100%;
+          }
+
+          textarea {
+            display: block;
+            height: 150px;
+            width: 100%;
+
+            &.error {
+              background: rgb(251, 227, 228);
+              border: 1px solid #fbc2c4;
+              color: #8a1f11;
+            }
+          }
+
+          h3 {
+            font-size: 18px;
+          }
+        }
+      }
+
+      > .actions {
+        a, a:hover, a:active {
+          background: $primary-color;
+        }
+
+        .disabled {
+          a, a:hover, a:active {
+            background: #eee;
+          }
+        }
       }
     }
   }
