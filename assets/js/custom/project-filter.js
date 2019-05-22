@@ -173,7 +173,12 @@ Promise.all([
     });
 
     // ability to toggle filter panel in/out
-    $('.project-filter-button').click(() => $('.project-filters').addClass('open'));
-    $('.project-filter-close').click(() => $('.project-filters').removeClass('open'));
+    const filterButton = $('.project-filter-button');
+    filterButton.click(() => {
+      if (filterButton.text() === 'Open Filters') filterButton.text('Close Filters');
+      else filterButton.text('Open Filters');
+      $('.project-filters').toggleClass('open');
+      $('.projects-panel').toggleClass('filters-open');
+    });
   });
 });
