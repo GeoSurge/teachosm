@@ -1,3 +1,6 @@
+---
+---
+
 const initializeForm = () => {
   const form = $("#add-project-form");
   form.validate({
@@ -67,7 +70,7 @@ const setProjectFile = file => {
 };
 
 
-fetch('/tags.json')
+fetch('{{site.baseurl}}/tags.json')
   .then(response => response.json())
   .then(tags => {
     initializeForm(); // need to set up query-steps before selectize, otherwise it will wipe out the tag options
