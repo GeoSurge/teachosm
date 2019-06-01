@@ -10,10 +10,12 @@
         </div>
         <span class="blog-post-by-line">
           <span>By </span>
-          <span class="blog-post-author">{{ page.author }}</span>
+          <span class="blog-post-author">{% if page.author %}{{ page.author }}{% else %}{{ "an Unknown Author" }}{% endif %}</span>
         </span>
         <span class="blog-post-bullet">&nbsp;&#8226;&nbsp;</span>
+        {% if page.date %}
         <span class="blog-post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+        {% endif %}
         </br>
         </br>
         </br>
