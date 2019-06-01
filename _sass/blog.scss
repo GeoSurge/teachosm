@@ -5,6 +5,10 @@
   overflow: hidden;
   padding: 32px;
 
+  @media screen and (max-width: 700px) {
+    margin-top: 50px;
+  }
+
   .blog-title {
     align-items: center;
     display: flex;
