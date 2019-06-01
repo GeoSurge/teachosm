@@ -41,63 +41,63 @@
   }
 
   .blog-post-list {
-    display: grid;
-    grid-auto-rows: 250px;
-    grid-gap: 16px 16px;
-    grid-template-columns: 1fr 1fr;
+    display: block;
     max-width: 1200px;
-
-    @media screen and (max-width: 850px) {
-      grid-template-columns: 1fr;
-    }
+    overflow: hidden;
 
     .blog-post-card-wrapper {
 
       &:hover {
         text-decoration: none;
         .blog-post-card {
-          background: $primary-color;
+          color: $primary-color;
+          .blog-post-card-title {
+            color: $primary-color;
+            text-decoration: none;
+          }
+          .blog-post-card-image-overlay {
+            background-color: $primary-color;
+          }
         }
       }
 
       .blog-post-card {
         border-radius: 4px;
-        border: 2px solid $primary-color;
-        display: grid;
-        grid-gap: 10px 10px;
-        grid-template-columns: 2fr 1fr;
+        border: none;
+        display: block;
         height: 100%;
+        margin: 50px 0px;
         text-decoration: none;
+        width: 100%;
 
-        .left {
-          padding: 20px;
-          padding-top: 32px;
-          position: relative;
-          .blog-post-card-title {
-            color: black;
-            font-size: 30px;
-            font-weight: bold;
-            margin-top: 0;
-          }
-          .blog-post-card-date {
-            color: rgb(20, 20, 20);
-            font-size: 14px;
-            margin-top: 10px;
-            text-decoration: none;
-          }
-          .blog-post-card-author {
-            bottom: 32px;
-            color: black;
-            font-size: 24px;
-            position: absolute;
-            text-decoration: none;
-          }
+        .blog-post-card-title {
+          color: black;
+          font-size: 30px;
+          font-weight: bold;
+          margin-top: 0;
         }
 
-        .right {
+        .blog-post-card-image-wrapper {
+          height: 100%;
+          position: relative;
+          width: 100%;
+
           img.blog-post-card-image {
             height: 100%;
             width: 100%;
+          }
+
+          .blog-post-card-image-overlay {
+            bottom: 0;
+            display: block;
+            height:100%;
+            left:0;
+            opacity: 0.1;
+            position: absolute;
+            right: 0;
+            top:0;
+            width:100%;
+            z-index: 10;
           }
         }
       }
