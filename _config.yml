@@ -1,4 +1,3 @@
----
 title: TeachOSM
 timezone: UTC
 collections:
@@ -10,6 +9,9 @@ collections:
     output: true
   projects:
     title: Projects
+    output: true
+  resources:
+    title: Resources
     output: true
   uploads:
     title: Uploads
