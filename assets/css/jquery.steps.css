@@ -194,11 +194,10 @@
 .wizard > .content > .body input[type="text"]
 {
     font-size: 16px;
-    height: 32px;
-    line-height: 24px;
     margin-bottom: 16px;
-    padding: 4px 8px 0;
+    padding: 8px;
     width: 250px;
+    line-height: normal;
 }
 
 .wizard > .content > .body input[type="radio"]
