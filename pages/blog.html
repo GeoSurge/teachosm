@@ -10,55 +10,14 @@ pagination:
   <h1 class="page-title">Blog Posts</h1>
 </div>
 
-{% comment %}
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      <div class="fa fa-chevron-left" title="previous"></div>
-    </a>
-  {% else %}
-      <div class="fa fa-chevron-left" title="previous"></div>
-  {% endif %}
-  <span class="page_number">
-    Page <input onClick="this.setSelectionRange(0, this.value.length)" class="pagination-number" type="text" value="{{ paginator.page }}"> of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">
-      <div class="fa fa-chevron-right" title="next"></div>
-    </a>
-  {% else %}
-    <span class="next">
-      <div class="fa fa-chevron-right" title="next"></div>
-    </span>
-  {% endif %}
-</div>
-{% endif %}
-{% endcomment %}
 <div class="blog-post-list">
   {% for post in site.posts %}
   <a href="{{ post.url }}" class="blog-post-card-wrapper">
     <div class="blog-post-card">
-      <div class="left">
-        <div class="blog-post-card-title">{{ post.title }}</div>
-        <div class="blog-post-card-date">
-          {% assign month = post.date | date: "%b"  %}
-          {% assign day = post.date | date: "%-d"  %}
-          {% assign year = post.date | date: "%Y"  %}
-
-          {{ month }}
-          {% case day %}
-            {% when '1' or '21' or '31' %}{{ day }}st
-            {% when '2' or '22' %}{{ day }}nd
-            {% when '3' or '23' %}{{ day }}rd
-            {% else %}{{ day }}th
-          {% endcase %}
-          {{year}}
-        </div>
-        <div class="blog-post-card-author">{{ post.author }}</div>
-      </div>
-      <div class="right">
-        <img class="blog-post-card-image" src="/assets/images/default-profile.jpg">
+      <div class="blog-post-card-title">{{ post.title }}</div>
+      <div class="blog-post-card-image-wrapper">
+        <img class="blog-post-card-image" src="/assets/images/default-blog-post.jpg">
+        <div class="blog-post-card-image-overlay"></div>
       </div>
     </div>
   </a>
