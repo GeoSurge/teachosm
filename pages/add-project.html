@@ -5,18 +5,16 @@ layout: default
 ---
 
 <h1 class="page-title">Add Project</h1>
-<form id="add-project-form" action="#">
+<form id="add-project-form" action="#" class="hidden">
   <div>
     <h1>User Information</h1>
     <section>
-      <label for="firstName">First name *</label>
-      <input id="firstName" name="firstName" type="text" class="required">
-      <label for="lastName">Last name *</label>
-      <input id="lastName" name="lastName" type="text" class="required">
+      <label for="name">Name *</label>
+      <input id="name" name="name" type="text" class="">
       <label for="email">Email *</label>
-      <input id="email" name="email" type="text" class="required email">
+      <input id="email" name="email" type="text" class=" email">
       <label for="confirmEmail">Confirm email *</label>
-      <input id="confirmEmail" name="confirmEmail" type="text" class="required email">
+      <input id="confirmEmail" name="confirmEmail" type="text" class=" email">
     </section>
     <h1>Project Information</h1>
     <section>
@@ -24,8 +22,18 @@ layout: default
       <input id="projectTitle" name="projectTitle" type="text" class="required">
       <label for="projectSubtitle">Subtitle</label>
       <input id="projectSubtitle" name="projectSubtitle" type="text">
-      <label for="projectDescription">Description</label>
-      <textarea id="projectDescription" name="projectDescription"></textarea>
+      <label for="projectDescription">Description *</label>
+      <textarea id="projectDescription" name="projectDescription" class="required"></textarea>
+      <label class="top-margin">Thumbnail Image *</label>
+      <div class="uploadable">
+        <input id="projectImage" name="projectImage" type="file" class="required" />
+        <label id="projectImageLabel" for="projectImage"><i class="fa fa-image"></i><br />Upload Image</label>
+      </div>
+      <label class="top-margin">Project materials *</label>
+      <div class="uploadable">
+        <input id="projectFile" name="projectFile" type="file" class="required" />
+        <label id="projectFileLabel" for="projectFile"><i class="fa fa-upload"></i><br />Upload File</label>
+      </div>
     </section>
     <h1>Filters and Tags</h1>
     <section>
@@ -36,7 +44,9 @@ layout: default
           <label for="{{ filter.name }}::{{ option.name }}">{{ option.name }}</label>
           <br />
         {% endfor %}
-    {% endfor %}
+      {% endfor %}
+      <label for="tagSelector">Tags</label>
+      <input id="tagSelector" data-placeholder="Select tags" />
     </section>
     <h1>Finish and Submit</h1>
     <section>
