@@ -12,7 +12,7 @@ pagination:
 
 <div class="blog-post-list">
   {% for post in site.posts %}
-  <a href="{{ post.url }}" class="blog-post-card-wrapper">
+  <a href="{{site.baseurl}}{{ post.url }}" class="blog-post-card-wrapper">
     <div class="blog-post-card">
       <div class="blog-post-card-title">{{ post.title }}</div>
       <div class="blog-post-card-image-wrapper">
