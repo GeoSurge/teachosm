@@ -33,3 +33,9 @@ pagination:
   sort_field: date
   sort_reverse: true
 permalink: "/:collection/:year/:month/:title.html"
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
