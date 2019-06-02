@@ -4,7 +4,8 @@
 const DEFAULT_THUMBNAIL = '{{site.baseurl}}/assets/images/project-thumbnails/default-thumbnail.jpg';
 
 class ProjectFilter {
-  constructor ({ filterElements, filterOptions, projects, projectsElement, searchElement, tagOptions, tagsElement }) {
+  constructor ({ clearElement, filterElements, filterOptions, projects, projectsElement, searchElement, tagOptions, tagsElement }) {
+    this.clearElement = clearElement;
     this.filterElements = filterElements;
     this.filterOptions = filterOptions;
     this.filters = {};
@@ -37,6 +38,7 @@ class ProjectFilter {
       });
     })
     this.tagsElement.on('change', event => this.updateTags(event.target.value));
+    this.clearElement.on('click', () => this.clear());
   }
 
   addFilter (item) {
@@ -72,6 +74,18 @@ class ProjectFilter {
     if (!this.tags.length) return true;
     if (project.tags.some(tag => this.tags.includes(tag))) return true;
     return false;
+  }
+
+  clear () {
+    this.tagsElement[0].selectize.clear();
+    this.tags = [];
+    this.filterElements.forEach(element => {
+      element.find('input').attr('checked', false);
+    });
+    const newFilters = {};
+    Object.keys(this.filters).forEach(key => newFilters[key] = []);
+    this.filters = newFilters;
+    this.renderProjects();
   }
 
   projectHtml (project) {
@@ -166,6 +180,7 @@ Promise.all([
     });
 
     new ProjectFilter({
+      clearElement: $('#clear-project-filters'),
       filterElements: filterOptions.map(filter => $(`.project-filter.${filter.name}`)),
       filterOptions,
       projects: projects.map(project => ({ ...project, tags: project.tags.split(', ').filter(Boolean) })),
