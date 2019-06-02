@@ -27,6 +27,7 @@ $tablet-width: 900px;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 200px;
 
   &:hover, &:active, &:focus {
     color: $primary-color;

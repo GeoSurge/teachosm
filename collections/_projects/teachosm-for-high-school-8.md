@@ -20,6 +20,6 @@ project: ''
 layout: project
 url: teachosm-for-high-school-8
 tags:
-- Agriculture, Food Production and Rural Land Use
+- Agriculture Food Production and Rural Land Use
 ---
 

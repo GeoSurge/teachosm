@@ -178,8 +178,8 @@ Promise.all([
     // ability to toggle filter panel in/out
     const filterButton = $('.project-filter-button');
     filterButton.click(() => {
-      if (filterButton.text() === 'Open Filters') filterButton.text('Close Filters');
-      else filterButton.text('Open Filters');
+      if (filterButton.text() === 'Filter Projects') filterButton.text('Close Filters');
+      else filterButton.text('Filter Projects');
       $('.project-filters').toggleClass('open');
       $('.projects-panel').toggleClass('filters-open');
     });

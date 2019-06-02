@@ -41,7 +41,7 @@
         margin-right: 16px;
 
         @media(max-width: $tablet-width) {
-          max-width: 200px;
+          max-width: 300px;
         }
       }
 
@@ -118,6 +118,10 @@
 
         .card-button {
           grid-column: 5/7;
+
+          > a {
+            max-width: 100%;
+          }
         }
       }
 
