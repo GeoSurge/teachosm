@@ -58,9 +58,14 @@
           .blog-post-card-title {
             color: $primary-color;
             text-decoration: none;
+            transition: background-color .3s linear;
           }
           .blog-post-card-image-overlay {
             background-color: $primary-color;
+            transition: background-color .3s linear;
+            .blog-post-overlay-text {
+              opacity: 1 !important;
+            }
           }
         }
       }
@@ -88,6 +93,7 @@
 
           img.blog-post-card-image {
             height: 100%;
+            user-select: none;
             width: 100%;
           }
 
@@ -96,12 +102,22 @@
             display: block;
             height:100%;
             left:0;
-            opacity: 0.1;
+            opacity: 0.95;
             position: absolute;
             right: 0;
             top:0;
             width:100%;
             z-index: 10;
+
+            .blog-post-overlay-text {
+              color: white;
+              font-size: 20px;
+              font-weight: bold;
+              height: 100%;
+              opacity: 0;
+              padding: 15px;
+              width: 100%;
+            }
           }
         }
       }
@@ -147,5 +163,6 @@
     margin-bottom: 2rem;
     margin-top: 2rem;
     max-width: 100%;
+    user-select: none;
   }
 }

@@ -21,7 +21,9 @@ pagination:
         {% else %}
         <img class="blog-post-card-image" src="./assets/images/default-blog-post.jpg">
         {% endif %}
-        <div class="blog-post-card-image-overlay"></div>
+        <div class="blog-post-card-image-overlay">
+          <div class="blog-post-overlay-text">{{post.description}}</div>
+        </div>
       </div>
     </div>
   </a>
