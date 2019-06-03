@@ -1,12 +1,11 @@
 ---
 title: OpenStreetMap Map Features
-description:  
+description:  description coming soon
 author:
   name: TeachOSM Contributors
-type:
-thumbnail: 
-link: https://wiki.openstreetmap.org/wiki/Map_Features
+thumbnail: tasks.png
+link: https://tasks.teachosm.org/
 tags:
-- 
-- 
+  Mapping
+  GIS
 ---

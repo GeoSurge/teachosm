@@ -1,12 +1,9 @@
 ---
 title: MapGive
-description:  
+description: description coming soon
 author:
   name: TeachOSM Contributors
 type:
-thumbnail: 
+thumbnail: tasks.png
 link: https://mapgive.state.gov/
-tags:
-- 
-- 
 ---

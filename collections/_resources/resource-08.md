@@ -1,12 +1,9 @@
 ---
 title: OSMCha
-description:  
+description: description coming soon  
 author:
   name: TeachOSM Contributors
 type:
-thumbnail: 
+thumbnail: tasks.png
 link: https://osmcha.mapbox.com
-tags:
-- 
-- 
 ---

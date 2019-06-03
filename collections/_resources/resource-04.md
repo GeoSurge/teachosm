@@ -1,12 +1,9 @@
 ---
 title: HOT Tasking Manager
-description:  
+description:  description coming soon
 author:
   name: TeachOSM Contributors
 type:
-thumbnail: 
+thumbnail:  tasks.png
 link: https://tasks.hotosm.org/
-tags:
-- 
-- 
 ---

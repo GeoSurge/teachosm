@@ -1,12 +1,9 @@
 ---
 title: Humanitarian OpenStreetMap Team
-description: 
+description: description coming soon
 author:
   name: TeachOSM Contributors
 type:
-thumbnail: 
+thumbnail: tasks.png
 link: https://www.hotosm.org/
-tags:
-- 
-- 
 ---
