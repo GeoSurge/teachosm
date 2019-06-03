@@ -1,8 +1,15 @@
 .add-project {
   margin: 125px 32px;
 
-  .page-title {
-    font-size: 24px;
+  header {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .page-title {
+      font-size: 24px;
+    }
   }
 
   form {
@@ -147,4 +154,34 @@
 
 .selectize-dropdown {
   z-index: 9999;
+}
+
+.project-filter-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin-top: 0;
+    font-size: 12px !important;
+    font-weight: bold;
+    color: rgba(black, 0.65);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .project-filter-options-wrapper {
+    border: 1px solid rgba(black, 0.25);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 16px;
+
+    input {
+      margin-right: 8px;
+    }
+
+    label {
+      font-size: 12px;
+    }
+  }
 }

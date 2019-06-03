@@ -41,7 +41,7 @@
         margin-right: 16px;
 
         @media(max-width: $tablet-width) {
-          max-width: 200px;
+          max-width: 300px;
         }
       }
 
@@ -92,7 +92,7 @@
 
         .card-description {
           grid-column: 4/7;
-          font-size: 12px;
+          font-size: 14px;
           overflow: auto;
         }
 
@@ -118,6 +118,10 @@
 
         .card-button {
           grid-column: 5/7;
+
+          > a {
+            max-width: 100%;
+          }
         }
       }
 
@@ -171,6 +175,7 @@
   header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     > h1 {
       margin: 0;

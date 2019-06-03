@@ -38,30 +38,45 @@ const initializeForm = () => {
       return form.valid();
     },
     onFinished: (event, currentIndex) => {
-      alert("Submitted!");
+      submitForm();
     },
   });
   form.removeClass('hidden');
 }
 
-let tags;
-const setTags = tagsString => {
-  tags = tagsString.split(',');
-}
+let name;
+const setName = value => name = value;
 
-let projectImage;
+let email;
+const setEmail = value => email = value;
+
+let title;
+const setTitle = value => title = value;
+
+let subtitle;
+const setSubtitle = value => subtitle = value;
+
+let description;
+const setDescription = value => description = value;
+
+let tags;
+const setTags = tagsString => tags = tagsString.split(',');
+
+let projectImage, projectImageName;
 const setProjectImage = image => {
   const reader = new FileReader();
   reader.onloadend = () => {
+    projectImageName = image.name;
     projectImage = reader.result;
     $('#projectImageLabel').html('<i class="fa fa-check"></i><br />Image Uploaded!');
   }
   reader.readAsDataURL(image);
 };
 
-let projectFile;
+let projectFile, projectFileName;
 const setProjectFile = file => {
   const reader = new FileReader();
+  projectFileName = file.name;
   reader.onloadend = () => {
     projectFile = reader.result;
     $('#projectFileLabel').html('<i class="fa fa-check"></i><br />File Uploaded!');
@@ -69,6 +84,27 @@ const setProjectFile = file => {
   reader.readAsDataURL(file);
 };
 
+const pullRequestURL = '';
+const projectImageUploadURL = 'https://ohwy7x30i8.execute-api.us-east-1.amazonaws.com/dev/requestUploadURL';
+const projectFileUploadURL = '';
+
+const submitForm = async () => {
+  // const parsedImageName = projectImageName.split('.');
+  // const imageResponse = await axios.post(projectImageUploadURL, {
+  //   name: projectImageName,
+  //   type: `image/${parsedImageName[parsedImageName.length - 1]}`,
+  // });
+
+  // console.log('response: ', imageResponse);
+
+  // const parsedFileName = projectFileName.split('.');
+  // const fileResponse = await axios.post(projectFileUploadURL, {
+  //   name: projectFileName,
+  //   type: `image/${parsedFileName[parsedFileName.length - 1]}`,
+  // });
+
+
+}
 
 fetch('{{site.baseurl}}/tags.json')
   .then(response => response.json())
@@ -85,9 +121,19 @@ fetch('{{site.baseurl}}/tags.json')
       valueField: 'value',
     });
 
+    const nameSelector = $('#name');
+    const emailSelector = $('#email');
+    const titleSelector = $('#title');
+    const subtitleSelector = $('#subtitle');
+    const descriptionSelector = $('#description');
     const projectImageSelector = $('#projectImage');
     const projectFileSelector = $('#projectFile');
 
+    nameSelector.on('change', event => setName(event.target.value));
+    emailSelector.on('change', event => setEmail(event.target.value));
+    titleSelector.on('change', event => setTitle(event.target.value));
+    subtitleSelector.on('change', event => setSubtitle(event.target.value));
+    descriptionSelector.on('change', event => setDescription(event.target.value));
     tagSelector.on('change', event => setTags(event.target.value));
     projectImageSelector.on('change', event => setProjectImage(event.target.files[0]));
     projectFileSelector.on('change', event => setProjectFile(event.target.files[0]));

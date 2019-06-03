@@ -82,12 +82,15 @@
         </div>
         <div class="project-tags">
           <p>Tags:&nbsp;</p>
-          {% for tag in page.tags %}
-            <span class="card-tag">{{ tag }}</span>
-          {% endfor %}
+          <div class="card-tags">
+            {% for tag in page.tags %}
+              <span class="card-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
         </div>
         <p class="project-description">{{ page.description }}</p>
         <div class="project-buttons">
+          <a class="primary-button" href="{{site.baseurl}}/projects">Back to Projects</a>
           <a class="download-button" href="#">Download Project</a>
         </div>
       </content>
