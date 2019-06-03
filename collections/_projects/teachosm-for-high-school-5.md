@@ -15,7 +15,6 @@ project: ''
 layout: project
 url: teachosm-for-high-school-5
 tags:
-- Mapping
-- GIS
+- Population and Migration
 ---
 

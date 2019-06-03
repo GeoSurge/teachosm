@@ -20,7 +20,6 @@ project: ''
 layout: project
 url: teachosm-for-high-school-8
 tags:
-- Mapping
-- GIS
+- Agriculture Food Production and Rural Land Use
 ---
 

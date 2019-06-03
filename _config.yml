@@ -21,5 +21,23 @@ markdown: kramdown
 theme: minima
 plugins:
 - jekyll-feed
+#- jekyll-paginate-v2
 include:
 - pages
+pagination:
+  collection: posts
+  debug: true
+  enabled: true
+  per_page: 4
+  permalink: "/page/:num/"
+  title: ":title - page :num"
+  limit: 0
+  sort_field: date
+  sort_reverse: true
+permalink: "/:collection/:year/:month/:title.html"
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

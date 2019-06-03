@@ -4,12 +4,18 @@ permalink: "/projects/"
 layout: default
 ---
 
-<div class="projects-title">
-  <h1 class="page-title">Projects</h1>
-  <input id="project-search" placeholder="Search projects..." />
-  <button class="primary-button btn btn-large project-filter-button">Filter</button>
-</div>
-<div class="project-list">
+<div class="projects-wrapper">
+  <section class="projects-panel">
+    <div class="projects-title">
+      <div class="card-button">
+        <a class="primary-button project-add-button" href="{{site.baseurl}}/projects/add">Create Project</a>
+      </div>
+      <input id="project-search" placeholder="Search projects..." />
+      <button class="primary-button btn btn-large card-button project-filter-button">Filter Projects</button>
+    </div>
+    <div class="project-list">
+    </div>
+  </section>
+  {% include projects/filters.html %}
 </div>
 
-{% include projects/filters.html %}

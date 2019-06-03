@@ -2,10 +2,17 @@
 <!-- Plugin JavaScript -->
 <script src="{{site.baseurl}}/assets/js/jquery.easing.min.js"></script>
 <script src="{{site.baseurl}}/assets/js/classie.js"></script>
-<script src="{{site.baseurl}}/assets/js/cbpAnimatedHeader.js"></script>
 <script src="{{site.baseurl}}/assets/js/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/agency.js"></script>
 {% if page.title == 'home' %}
 <script src="{{site.baseurl}}/assets/js/cbpAnimatedHeader.js"></script>
-{% endif %}
+{% elsif page.title == 'projects' %}
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/selectize.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/custom/project-filter.js"></script>
+{% elsif page.title == 'add-project' %}
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/selectize.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.steps.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/custom/add-project-form.js"></script>
+<script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+{% endif %}
