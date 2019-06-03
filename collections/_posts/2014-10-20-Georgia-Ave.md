@@ -6,7 +6,7 @@ description: "In July-August 2014, members of MappingDC worked with about 20 stu
 
 ## Georgia Avenue Youth Ambassadors Mapping Project
 
-![Georgia_Avenue_Youth_Ambassadors.jpg](/assets/images/blog/Georgia_Avenue_Youth_Ambassadors.jpg)
+![Georgia_Avenue_Youth_Ambassadors.jpg](../../../assets/images/blog/Georgia_Avenue_Youth_Ambassadors.jpg)
 
 ### The Backstory
 In July-August 2014, members of MappingDC worked with about 20 students ages 12-18 in Washington, DC to map out Georgia Avenue, a major commercial corridor in a largely lower-income part of town.
