@@ -6,7 +6,7 @@ description: "Nuala Cowan & Richard Hinton of the Geography department regularly
 
 ## OSM at George Washington University
 
-<img src="./assets/images/blog/gwu-casestudy.jpg" />
+![gwu-casestudy.jpg](../../../assets/images/blog/gwu-casestudy.jpg)
 
 ### Backstory
 Nuala Cowan & Richard Hinton of the Geography department regularly integrate the open source mapping platform, OpenStreetMap into the curriculum for their introductory undergraduate Geographical Information Systems (GIS) & Cartography classes, -traditionally the domain of proprietary desktop software and data. They have sought to expand the traditional curriculum, and expose students to various open source software, web based platforms, and data collection initiatives, specifically in a service-learning environment.
