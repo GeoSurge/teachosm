@@ -1,14 +1,13 @@
 ---
 title: TeachOSM on Cape Cod
 thumbnail: capecod-casestudy-1.jpg
+description: "In the United States, AP Geography is offered during high school students' freshman year.  As explained by The College Board, since it's introduction in 2001, the growth of the number of students taking the course has been one of the fastest of all AP course offerings to high school students across the United States.  A similar growth pattern has taken place in the number of contributors to the OpenStreetMap (OSM) since it's birth and, in the United States specifically, since the 1st State of the Map U.S. (SOTMUS) Conference in 2010."
 ---
 ![capecod-casestudy-1.jpg](/assets/images/blog/capecod-casestudy-1.jpg)
 ![capecod-casestudy-2.jpg](/assets/images/blog/capecod-casestudy-2.jpg)
 
 ### Backstory
-In the United States, AP Geography is offered during high school students' freshman year.  As explained by The College Board [1], since it's introduction in 2001, the growth of the number of students taking the course has been one of the
-fastest of all AP course offerings to high school students across the United States.  A similar growth pattern has taken place in the number of contributors to the OpenStreetMap (OSM) since it's birth and, in the United States specifically,
-since the 1st State of the Map U.S. (SOTMUS) Conference in 2010.
+In the United States, AP Geography is offered during high school students' freshman year.  As explained by The College Board [1], since it's introduction in 2001, the growth of the number of students taking the course has been one of the fastest of all AP course offerings to high school students across the United States.  A similar growth pattern has taken place in the number of contributors to the OpenStreetMap (OSM) since it's birth and, in the United States specifically, since the 1st State of the Map U.S. (SOTMUS) Conference in 2010.
 
 Shawn Goulet, a GIS Analyst with the Cape Cod Commission made an introduction to OSM presentation to the staff of the Social Studies department of Barnstable Public Schools in the Fall of 2013 and was bolstered following Shawn's attendance at
 SOTMUS 2014 in Washington, D.C.  Hilary Mueller, the AP Geography teacher at Barnstable High School, and Virginia Turner, the Social Studies Curriculum Coordinator for grades 6-12 in Barnstable Public Schools enthusiastically welcomed Shawn to
