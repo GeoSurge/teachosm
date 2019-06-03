@@ -1,5 +1,6 @@
 ---
 title: Conducting Street-level Surveys in DC
+description: "Conducting a street-level survey is a great way to get students acquainted with local land use and land cover while learning important technical skills in the [OpenStreetMap](http://openstreetmap/) environment. The objective of a survey is to make a field-level determination of how the property or building is being used, create a geo-located photo survey of the streetscape, and add those features to OpenStreetMap. In the paragraphs below, we discuss the rationale for a street-level survey, outline the basic mapping activities, and offer pointers for your street-level survey."
 ---
 
 # "DC Great Streets: A Street-level Survey Using OpenStreetMap"
