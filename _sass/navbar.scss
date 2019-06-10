@@ -73,7 +73,7 @@
 
 @media(min-width:768px) {
   .navbar-default {
-    padding: 25px 0;
+    padding: 10px 0;
     border: 0;
     background-color: transparent;
     -webkit-transition: padding .3s;
@@ -141,3 +141,10 @@
 
   }
 }
+
+/* bootstrap overrides for a thinner navbar */
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:15px !important; padding-bottom:0 !important;
+    height: 30px;
+}
+.navbar {min-height:30px !important;}
