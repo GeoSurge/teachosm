@@ -77,7 +77,7 @@ We may also maintain and use information in de-identified or aggregated forms th
 
 ### Payment Processing
 
-When you make a donation to TeachOSM, your payment information is processed by third-party donation and payment processing services, Donately and Stripe, which are compliant with the Payment Card Industry Data Security Standards.  TeachOSM does not see, use, or retain your payment information. 
+TeachOSM is a chartered project of OpenStreetMap US, so when you make a donation to TeachOSM, your donation will go through OpenStreetMap US. Your payment information is processed by third-party donation and payment processing services. TeachOSM does not see, use, or retain your payment information.
 
 ### Legal Bases for Collecting and Using Information
 
