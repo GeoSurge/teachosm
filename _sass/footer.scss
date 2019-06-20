@@ -44,16 +44,11 @@ ul.social-buttons li a:active {
   background-color: $primary-color;
 }
 
-#donate {
+#donate a {
   border-color: $primary-color;
   background-color: $primary-color;
   border-radius: 3px;
-  padding: 2px 10px 2px 10px;
-  margin-left: 5px;
-}
-
-#donate a {
-  font-family: $font;
+  padding: 5px 10px 5px 10px;
   font-weight: 400;
   letter-spacing: 1px;
   color: #fff;
@@ -67,6 +62,6 @@ ul.social-buttons li a:active {
   outline: 0;
   color: $secondary-color;
   text-decoration: none;
+  background-color: #fff;
 }
-
 
