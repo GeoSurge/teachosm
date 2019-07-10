@@ -1,16 +1,16 @@
 ---
 title: Education Activity Duration
-name: project-time
+name: project_time
 options:
 - name: "< 1 hour"
-  value: 0
+  value: less_than_one_hour
 - name: 1 hour
-  value: 1
+  value: one_hour
 - name: 2 - 4 hours
-  value: 2
+  value: two_to_four_hours
 - name: 1 day
-  value: 3
+  value: one_day
 - name: "> 1 day"
-  value: 4
+  value: more_than_one_day
 ---
 

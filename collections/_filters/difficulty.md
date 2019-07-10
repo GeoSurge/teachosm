@@ -3,10 +3,10 @@ title: Difficulty
 name: difficulty
 options:
 - name: Beginner
-  value: 0
+  value: beginner
 - name: Intermediate
-  value: 1
+  value: intermediate
 - name: Advanced
-  value: 2
+  value: advanced
 ---
 

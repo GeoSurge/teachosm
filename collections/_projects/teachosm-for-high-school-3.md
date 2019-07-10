@@ -6,15 +6,15 @@ description: This module organizes basic OSM contributing resources for teachers
   to the OSM project. In this module, students will be fully prepared to contribute
   to the OSM project.  Students will familiarize themselves with these mapping-ready
   resources and answer open-ended questions on important points of the three resources.
-author:
-  name: TeachOSM Contributors
+author: TeachOSM Contributors
 thumbnail: teachosm-for-high-school-3.png
-type: 0
-audience: 3
-difficulty: 0
-preparation-time: 1
-project-time: 2
-project: ''
+filename: teachosm-for-high-school-3.pdf
+type: desktop
+audience: university
+difficulty: beginner
+preparation_time: one_hour
+project_time: two_to_four_hours
+group: ''
 layout: project
 url: teachosm-for-high-school-3
 tags:

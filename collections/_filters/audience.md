@@ -3,14 +3,14 @@ title: Audience
 name: audience
 options:
 - name: Primary
-  value: 0
+  value: primary
 - name: High School / Secondary
-  value: 1
+  value: high_school
 - name: Community College
-  value: 2
+  value: community_college
 - name: University
-  value: 3
+  value: university
 - name: Other
-  value: 4
+  value: other
 ---
 
