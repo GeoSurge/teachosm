@@ -11,12 +11,10 @@
       "type": "{{ project.type }}",
       "audience": "{{ project.audience }}",
       "difficulty": "{{ project.difficulty }}",
-      "preparation-time": "{{ project.preparation-time }}",
-      "project-time": "{{ project.project-time }}",
-      "author": {
-        "name": "{{ project.author.name }}"
-      },
-      "thumbnail": "{{ site.baseurl }}/assets/images/project-thumbnails/{{ project.thumbnail }}",
+      "preparation_time": "{{ project.preparation_time }}",
+      "project_time": "{{ project.project_time }}",
+      "author": "{{ project.author.name }}",
+      "thumbnail": "https://teachosm-project-pics.s3.amazonaws.com/{{ project.thumbnail }}",
       "url": "{{ site.baseurl }}{{ project.url }}"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}

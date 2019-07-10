@@ -1,7 +1,7 @@
 ---
 ---
 
-const DEFAULT_THUMBNAIL = '{{site.baseurl}}/assets/images/project-thumbnails/default-thumbnail.jpg';
+const DEFAULT_THUMBNAIL = 'https://teachosm-project-pics.s3.amazonaws.com/default-thumbnail.jpg';
 
 class ProjectFilter {
   constructor ({ clearElement, filterElements, filterOptions, projects, projectsElement, searchElement, tagOptions, tagsElement }) {
@@ -52,7 +52,7 @@ class ProjectFilter {
     const { author, title, subtitle, tags } = project;
     if (title.toLowerCase().includes(this.search)) return true;
     if (subtitle.toLowerCase().includes(this.search)) return true;
-    if (author.name.toLowerCase().includes(this.search)) return true;
+    if (author.toLowerCase().includes(this.search)) return true;
     if (tags.some(tag => tag.toLowerCase().includes(this.search))) return true;
     return false;
   }
@@ -107,7 +107,7 @@ class ProjectFilter {
         <div class="card-title">
           <h1>${title}</h1>
           <h2>${subtitle}</h2>
-          <p>${author.name}</p>
+          <p>${author}</p>
         </div>
         <p class="card-description">${project.description}</p>
         <div class="card-tags">

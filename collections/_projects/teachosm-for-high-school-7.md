@@ -6,15 +6,15 @@ description: In this module, students will map political/governmental facilities
   location(s) in the world.  Students will explore similarities and differences between
   the arrangement of these facilities in areas where government structures may differ.  A
   suggested implementation is provided.
-author:
-  name: TeachOSM Contributors
+author: TeachOSM Contributors
 thumbnail: teachosm-for-high-school-7.png
-type: 0
-audience: 3
-difficulty: 0
-preparation-time: 1
-project-time: 2
-project: ''
+filename: teachosm-for-high-school-7.pdf
+type: desktop
+audience: university
+difficulty: beginner
+preparation_time: one_hour
+project_time: two_to_four_hours
+group: ''
 layout: project
 url: teachosm-for-high-school-7
 tags:

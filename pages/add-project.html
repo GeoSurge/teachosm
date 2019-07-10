@@ -54,7 +54,7 @@ layout: default
           <div class="project-filter-options-wrapper">
             {% for option in filter.options %}
               <div class="project-filter-option">
-                <input id="{{ filter.name }}::{{ option.name }}" type="radio" name="{{ filter.name }}" value="{{ option.value }}" class="required" />
+                <input id="{{ filter.name }}::{{ option.name }}" type="radio" name="{{ filter.name }}" value="{{ option.value }}" class="required {{ filter.name }}-filter" />
                 <label for="{{ filter.name }}::{{ option.name }}">{{ option.name }}</label>
               </div>
             {% endfor %}

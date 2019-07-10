@@ -4,15 +4,15 @@ subtitle: Module 6 - Mapping Cultural Patterns and Processes OSM Map Features
 description: Students will map cultural patterns and processes features anywhere in
   the world. Specific map features and an example implementation approach will be
   described.
-author:
-  name: OpenStreetMap Contributors
+author: OpenStreetMap Contributors
 thumbnail: teachosm-for-high-school-6.png
-type: 0
-audience: 3
-difficulty: 0
-preparation-time: 2
-project-time: 1
-project: ''
+filename: teachosm-for-high-school-6.pdf
+type: desktop
+audience: university
+difficulty: beginner
+preparation_time: two_to_four_hours
+project_time: one_hour
+group: ''
 layout: project
 url: teachosm-for-high-school-6
 tags:

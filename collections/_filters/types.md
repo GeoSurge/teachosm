@@ -3,10 +3,10 @@ title: Project Type
 name: type
 options:
 - name: Desktop
-  value: 0
+  value: desktop
 - name: Field
-  value: 1
+  value: field
 - name: Mobile
-  value: 2
+  value: mobile
 ---
 

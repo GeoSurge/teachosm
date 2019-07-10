@@ -5,77 +5,77 @@
     <div class="page">
       {% include navbar.html %}
       <content class="project-content">
-        <img src="{{ site.baseurl }}/assets/images/project-thumbnails/{{ page.thumbnail }}" />
+        <img src="https://teachosm-project-pics.s3.amazonaws.com/{{ page.thumbnail }}" />
         <header class="project-title">
           <h1>{{ page.title }}</h1>
           <h3>{{ page.subtitle }}</h3>
-          <p>{{ page.author.name }}</p>
+          <p>{{ page.author }}</p>
         </header>
         <div class="project-filters-display">
           <h3>Project Type:</h3>
           <p>
             {% case page.type %}
-              {% when 0 %}
+              {% when 'desktop' %}
               Desktop
-              {% when 1 %}
+              {% when 'field' %}
               Field
-              {% when 2 %}
+              {% when 'mobile' %}
               Mobile
             {% endcase %}
           </p>
           <h3>Audience:</h3>
           <p>
             {% case page.audience %}
-              {% when 0 %}
+              {% when 'primary' %}
               Primary
-              {% when 1 %}
+              {% when 'high_school' %}
               High School / Secondary
-              {% when 2 %}
+              {% when 'community_college' %}
               Community College
-              {% when 3 %}
+              {% when 'university' %}
               University
-              {% when 4 %}
+              {% when 'other' %}
               Other
             {% endcase %}
           </p>
           <h3>Difficulty:</h3>
           <p>
             {% case page.difficulty %}
-              {% when 0 %}
+              {% when 'beginner' %}
               Beginner
-              {% when 1 %}
+              {% when 'intermediate' %}
               Intermediate
-              {% when 2 %}
+              {% when 'advanced' %}
               Advanced
             {% endcase %}
           </p>
           <h3>Educator Preparation Time:</h3>
           <p>
-            {% case page.preparation-time %}
-              {% when 0 %}
+            {% case page.preparation_time %}
+              {% when 'less_than_one_hour' %}
               < 1 hour
-              {% when 1 %}
+              {% when 'one_hour' %}
               1 hour
-              {% when 2 %}
+              {% when 'two_to_four_hours' %}
               2 - 4 hours
-              {% when 3 %}
+              {% when 'one_day' %}
               1 day
-              {% when 4 %}
+              {% when 'more_than_one_day' %}
               > 1 day
             {% endcase %}
           </p>
           <h3>Education Activity Duration:</h3>
           <p>
-            {% case page.project-time %}
-              {% when 0 %}
+            {% case page.project_time %}
+              {% when 'less_than_one_hour' %}
               < 1 hour
-              {% when 1 %}
+              {% when 'one_hour' %}
               1 hour
-              {% when 2 %}
+              {% when 'two_to_four_hours' %}
               2 - 4 hours
-              {% when 3 %}
+              {% when 'one_day' %}
               1 day
-              {% when 4 %}
+              {% when 'more_than_one_day' %}
               > 1 day
             {% endcase %}
           </p>
@@ -90,8 +90,8 @@
         </div>
         <p class="project-description">{{ page.description }}</p>
         <div class="project-buttons">
-          <a class="primary-button" href="{{site.baseurl}}/projects">Back to Projects</a>
-          <a class="download-button" href="#">Download Project</a>
+          <a class="primary-button" href="{{ site.baseurl }}/projects">Back to Projects</a>
+          <a class="download-button" href="https://teachosm-project-content.s3.amazonaws.com/{{ page.filename }}" download="{{ page.url }}">Download Project</a>
         </div>
       </content>
     </div>

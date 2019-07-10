@@ -8,15 +8,15 @@ description: In this module, students will map road map features associated with
   products, the Census of Agriculture and the USDA CropScape tool to gain a sense
   about the agricultural industry in location(s) of study.  A suggested implementation
   is provided.
-author:
-  name: TeachOSM Contributors
+author: TeachOSM Contributors
 thumbnail: teachosm-for-high-school-8.jpg
-type: 0
-audience: 3
-difficulty: 0
-preparation-time: 0
-project-time: 2
-project: ''
+filename: teachosm-for-high-school-8.pdf
+type: desktop
+audience: university
+difficulty: beginner
+preparation_time: less_than_one_hour
+project_time: two_to_four_hours
+group: ''
 layout: project
 url: teachosm-for-high-school-8
 tags:
