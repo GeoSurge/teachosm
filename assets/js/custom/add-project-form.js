@@ -120,20 +120,20 @@ const submitForm = async () => {
       'Content-Type': projectImageType,
     }
   );
-  // const fileResponse = await axios.post(
-  //   projectFileUploadURL,
-  //   {
-  //     name: projectFileName,
-  //     type: projectFileType,
-  //   }
-  // );
-  // const fileUploadResponse = await axios.put(
-  //   fileResponse.data.uploadURL,
-  //   projectFile,
-  //   {
-  //     'Content-Type': projectFileType,
-  //   }
-  // );
+  const fileResponse = await axios.post(
+    projectFileUploadURL,
+    {
+      name: projectFileName,
+      type: projectFileType,
+    }
+  );
+  const fileUploadResponse = await axios.put(
+    fileResponse.data.uploadURL,
+    projectFile,
+    {
+      'Content-Type': projectFileType,
+    }
+  );
 
   const pullRequestData = {
     audience,
@@ -180,9 +180,9 @@ fetch('{{site.baseurl}}/tags.json')
 
     const nameSelector = $('#name');
     const emailSelector = $('#email');
-    const titleSelector = $('#title');
-    const subtitleSelector = $('#subtitle');
-    const descriptionSelector = $('#description');
+    const titleSelector = $('#projectTitle');
+    const subtitleSelector = $('#projectSubtitle');
+    const descriptionSelector = $('#projectDescription');
     const projectImageSelector = $('#projectImage');
     const projectFileSelector = $('#projectFile');
 
