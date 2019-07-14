@@ -106,6 +106,7 @@ const projectFileUploadURL = 'https://ohwy7x30i8.execute-api.us-east-1.amazonaws
 const pullRequestURL = 'https://p3keskibu8.execute-api.us-east-1.amazonaws.com/dev/posts';
 
 const submitForm = async () => {
+  const now = Date.now();
   const imageResponse = await axios.post(
     projectImageUploadURL,
     {
@@ -140,6 +141,7 @@ const submitForm = async () => {
     author: name,
     description,
     difficulty,
+    date_posted: now,
     email,
     filename: projectFileName,
     group: '',
@@ -151,7 +153,7 @@ const submitForm = async () => {
     thumbnail: projectImageName,
     title,
     type,
-    url: `${Date.now()}-${parseInt(Math.random() * 1000000)}`,
+    url: `${now}-${parseInt(Math.random() * 1000000)}`,
   };
 
   const pullRequestResponse = await axios.post(
