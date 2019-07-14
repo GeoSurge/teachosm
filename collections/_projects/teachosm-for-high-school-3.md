@@ -7,6 +7,7 @@ description: This module organizes basic OSM contributing resources for teachers
   to the OSM project.  Students will familiarize themselves with these mapping-ready
   resources and answer open-ended questions on important points of the three resources.
 author: TeachOSM Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-3.png
 filename: teachosm-for-high-school-3.pdf
 type: desktop

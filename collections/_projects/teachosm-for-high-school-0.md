@@ -5,6 +5,7 @@ description: This module provides an overview and explanation of the TeachOSM fo
   High School modules and how to use them.  Educators should work through this module
   prior to introducing students to Modules 1-12.
 author: TeachOSM Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-0.png
 filename: teachosm-for-high-school-0.pdf
 type: desktop

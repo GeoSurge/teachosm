@@ -91,25 +91,30 @@ class ProjectFilter {
   projectHtml (project) {
     const {
       author,
+      date_posted,
       description,
-      projectTime,
-      preparationTime,
       subtitle,
       tags,
       thumbnail,
       title,
       url,
     } = project;
+    console.log('project: ', project);
 
     return `
       <div class="project-card">
-        <img src="${thumbnail || DEFAULT_THUMBNAIL }" />
-        <div class="card-title">
-          <h1>${title}</h1>
-          <h2>${subtitle}</h2>
-          <p>${author}</p>
+        <a class="image-wrapper" href="${project.url}">
+          <img src="${thumbnail || DEFAULT_THUMBNAIL }" />
+        </a>
+        <div class="card-content">
+          <div class="card-title">
+            <a href="${project.url}"><h1><strong>Title: </strong>${title}</h1></a>
+            <h2><strong>Subtitle: </strong>${subtitle}</h2>
+            <p><strong>Author: </strong>${author}</p>
+            <p><strong>Date posted: </strong>${date_posted || '-'}</p>
+          </div>
+          <p class="card-description">${project.description}</p>
         </div>
-        <p class="card-description">${project.description}</p>
         <div class="card-tags">
           <p>Tags:&nbsp;</p>
           ${
@@ -117,9 +122,6 @@ class ProjectFilter {
               .map(tag => `<span class="card-tag">${tag}</span>`)
               .join('')
           }
-        </div>
-        <div class="card-button">
-          <a class="primary-button" href="${project.url}">Go to project</a>
         </div>
       </div>
     `;
@@ -168,6 +170,7 @@ Promise.all([
     filterOptions,
     tagOptions
   ]) => {
+    console.log('projects: ', projects);
     // initialize tag selector
     const tagsElement = $('#tags-selector').selectize({
       create: false,

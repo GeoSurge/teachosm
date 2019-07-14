@@ -5,6 +5,7 @@ description: Students will map cultural patterns and processes features anywhere
   the world. Specific map features and an example implementation approach will be
   described.
 author: OpenStreetMap Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-6.png
 filename: teachosm-for-high-school-6.pdf
 type: desktop

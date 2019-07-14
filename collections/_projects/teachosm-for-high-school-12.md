@@ -5,6 +5,7 @@ description: In this module, teachers will learn to plan and execute an in class
   will be provided including a suggested workflow for pre, during and post mapathon
   activities.
 author: TeachOSM and OpenStreetMap contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-12.png
 filename: teachosm-for-high-school-12.pdf
 type: desktop

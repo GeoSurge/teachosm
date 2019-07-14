@@ -4,6 +4,7 @@ subtitle: Module 5 - Population and Open Street Map
 description: This module organizes introductory level OpenStreetMap (OSM) resources
   that provide the teacher with a simple but comprehensive overview of the OSM project.
 author: OpenStreetMap Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-5.png
 filename: teachosm-for-high-school-5.pdf
 type: desktop

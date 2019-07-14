@@ -4,6 +4,7 @@ subtitle: Module 1 - Intro to field papers
 description: Students work in groups to map a section of a property using OSM-available
   base maps in the field.
 author: TeachOSM Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-1.png
 filename: teachosm-for-high-school-1.pdf
 type: desktop

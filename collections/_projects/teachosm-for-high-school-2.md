@@ -4,6 +4,7 @@ subtitle: Module 2 - Introduction to OpenStreetMap
 description: This module organizes introductory level OpenStreetMap (OSM) resources
   that provide the teacher with a simple, but comprehensive overview of the OSM project.
 author: TeachOSM Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-2.png
 filename: teachosm-for-high-school-2.pdf
 type: desktop

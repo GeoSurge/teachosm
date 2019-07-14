@@ -7,6 +7,7 @@ description: In this module, students will map political/governmental facilities
   the arrangement of these facilities in areas where government structures may differ.  A
   suggested implementation is provided.
 author: TeachOSM Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-7.png
 filename: teachosm-for-high-school-7.pdf
 type: desktop
