@@ -3,6 +3,7 @@ title: Teach OSM for High School
 subtitle: Module 10 - Mapping Cities and Urban Land Use
 description: Social creation of public space
 author: TeachOSM and OpenStreetMap contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-10.png
 filename: teachosm-for-high-school-10.pdf
 type: desktop

@@ -9,6 +9,7 @@ description: In this module, students will map road map features associated with
   about the agricultural industry in location(s) of study.  A suggested implementation
   is provided.
 author: TeachOSM Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-8.jpg
 filename: teachosm-for-high-school-8.pdf
 type: desktop

@@ -4,6 +4,7 @@ subtitle: Module 9 - Industrialization and Economic Development
 description: This module organizes introductory level OpenStreetMap (OSM) resources
   that provide the teacher with a simple but comprehensive overview of the OSM project.
 author: OpenStreetMap Contributors
+date_posted: 2019-08-01
 thumbnail: teachosm-for-high-school-9.png
 filename: teachosm-for-high-school-9.pdf
 type: desktop
