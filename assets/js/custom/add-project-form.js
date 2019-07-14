@@ -107,62 +107,104 @@ const pullRequestURL = 'https://p3keskibu8.execute-api.us-east-1.amazonaws.com/d
 
 const submitForm = async () => {
   const now = Date.now();
-  const imageResponse = await axios.post(
-    projectImageUploadURL,
-    {
-      name: projectImageName,
-      type: projectImageType,
-    }
-  );
-  const imageUploadResponse = await axios.put(
-    imageResponse.data.uploadURL,
-    projectImage,
-    {
-      'Content-Type': projectImageType,
-    }
-  );
-  const fileResponse = await axios.post(
-    projectFileUploadURL,
-    {
-      name: projectFileName,
-      type: projectFileType,
-    }
-  );
-  const fileUploadResponse = await axios.put(
-    fileResponse.data.uploadURL,
-    projectFile,
-    {
-      'Content-Type': projectFileType,
-    }
-  );
+  let imageResponse, imageUploadResponse;
+  let fileResponse, fileUploadResponse;
+  Swal.fire({
+    title: "Submitting project...",
+    onBeforeOpen: () => Swal.showLoading(),
+  });
+  try {
+    imageResponse = await axios.post(
+      projectImageUploadURL,
+      {
+        name: projectImageName,
+        type: projectImageType,
+      }
+    );
+    imageUploadResponse = await axios.put(
+      imageResponse.data.uploadURL,
+      projectImage,
+      {
+        'Content-Type': projectImageType,
+      }
+    );
+  } catch (e) {
+    Swal.fire({
+      title: 'There was a problem uploading your image.',
+      text: 'Please make sure the image you select is a valid .jpg or .png file and try again. If this problem persists, please contact us.',
+      type: 'error',
+      confirmButtonText: 'Ok, got it.'
+    });
+    return;
+  }
+  try {
+    fileResponse = await axios.post(
+      projectFileUploadURL,
+      {
+        name: projectFileName,
+        type: projectFileType,
+      }
+    );
+    fileUploadResponse = await axios.put(
+      fileResponse.data.uploadURL,
+      projectFile,
+      {
+        'Content-Type': projectFileType,
+      }
+    );
+  } catch (e) {
+    Swal.fire({
+      title: 'There was a problem uploading your project.',
+      text: 'Please make sure the project you selected is a valid .doc, .docx, .pdf, .md, or .txt file and try again. If this problem persists, please contact us.',
+      type: 'error',
+      confirmButtonText: 'Ok, got it.'
+    });
+    return;
+  }
+  try {
+    const pullRequestData = {
+      audience,
+      author: name,
+      description,
+      difficulty,
+      date_posted: now,
+      email,
+      filename: projectFileName,
+      group: '',
+      layout: 'project',
+      preparation_time: preparationTime,
+      project_time: projectTime,
+      subtitle,
+      tags,
+      thumbnail: projectImageName,
+      title,
+      type,
+      url: `${now}-${parseInt(Math.random() * 1000000)}`,
+    };
 
-  const pullRequestData = {
-    audience,
-    author: name,
-    description,
-    difficulty,
-    date_posted: now,
-    email,
-    filename: projectFileName,
-    group: '',
-    layout: 'project',
-    preparation_time: preparationTime,
-    project_time: projectTime,
-    subtitle,
-    tags,
-    thumbnail: projectImageName,
-    title,
-    type,
-    url: `${now}-${parseInt(Math.random() * 1000000)}`,
-  };
-
-  const pullRequestResponse = await axios.post(
-    pullRequestURL,
-    pullRequestData,
-    {
-      'Content-Type': 'application/json',
-    }
-  );
+    const pullRequestResponse = await axios.post(
+      pullRequestURL,
+      pullRequestData,
+      {
+        'Content-Type': 'application/json',
+      }
+    );
+    Swal.fire({
+      confirmButtonText: 'Ok, got it.',
+      text: 'Thank you for submitting a project. We will review the content and process it shortly.',
+      title: 'Thats it!',
+      type: 'success',
+    }).then(result => {
+      window.location.href = window.location.href.replace('/add', '');
+    });
+  } catch (e) {
+    Swal.fire({
+      title: 'Uh oh',
+      text: 'Looks like there was an issue with the request. We apologize for the inconvenience, please try again.',
+      type: 'error',
+      confirmButtonText: 'Ok, got it.'
+    });
+  }
 }
 
 fetch('{{site.baseurl}}/tags.json')
