@@ -103,13 +103,17 @@ class ProjectFilter {
 
     return `
       <div class="project-card">
-        <img src="${thumbnail || DEFAULT_THUMBNAIL }" />
-        <div class="card-title">
-          <h1>${title}</h1>
-          <h2>${subtitle}</h2>
-          <p>${author}</p>
+        <a class="image-wrapper" href="${project.url}">
+          <img src="${thumbnail || DEFAULT_THUMBNAIL }" />
+        </a>
+        <div class="card-content">
+          <div class="card-title">
+            <a href="${project.url}"><h1>${title}</h1></a>
+            <h2>${subtitle}</h2>
+            <p>${author}</p>
+          </div>
+          <p class="card-description">${project.description}</p>
         </div>
-        <p class="card-description">${project.description}</p>
         <div class="card-tags">
           <p>Tags:&nbsp;</p>
           ${
@@ -117,9 +121,6 @@ class ProjectFilter {
               .map(tag => `<span class="card-tag">${tag}</span>`)
               .join('')
           }
-        </div>
-        <div class="card-button">
-          <a class="primary-button" href="${project.url}">Go to project</a>
         </div>
       </div>
     `;
