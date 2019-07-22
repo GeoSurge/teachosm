@@ -29,6 +29,7 @@ const initializeForm = () => {
     headerTag: "h1",
     bodyTag: "section",
     transitionEffect: "slideLeft",
+    titleTemplate: "#title#",
     onStepChanging: (event, currentIndex, newIndex) => {
       form.validate().settings.ignore = ":disabled,:hidden";
       return form.valid();

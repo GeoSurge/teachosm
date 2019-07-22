@@ -99,7 +99,6 @@ class ProjectFilter {
       title,
       url,
     } = project;
-    console.log('project: ', project);
 
     return `
       <div class="project-card">
@@ -170,7 +169,6 @@ Promise.all([
     filterOptions,
     tagOptions
   ]) => {
-    console.log('projects: ', projects);
     // initialize tag selector
     const tagsElement = $('#tags-selector').selectize({
       create: false,

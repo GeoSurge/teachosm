@@ -1,11 +1,14 @@
 .add-project {
-  margin: 125px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 105px;
+  max-width: 850px;
 
   header {
-    padding: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 8px;
 
     .page-title {
       font-size: 24px;
@@ -17,12 +20,44 @@
     .wizard {
 
       > .steps {
+        border-bottom: 1px solid rgba(black, 0.3);
 
         > ul {
           display: flex;
 
-          > li a {
-            padding: 16px;
+          > li {
+            margin-right: 16px;
+
+            a {
+              background: white;
+              border-radius: 0px;
+              color: $secondary-color;
+              cursor: pointer;
+              margin: 0;
+              padding-top: 0px;
+              padding-left: 0;
+              padding-bottom: 8px;
+
+
+              &:hover, &:active {
+                background: white;
+                color: $secondary-color;
+              }
+            }
+          }
+
+          > li.current {
+            border-bottom: 3px solid $primary-color;
+
+            a {
+              font-weight: bold;
+              background: white;
+
+              &:hover, &:active {
+                background: white;
+                color: $secondary-color;
+              }
+            }
           }
 
           @media (max-width: $tablet-width) {
@@ -43,16 +78,19 @@
 
           }
         }
-        .current {
-          a, a:hover, a:active {
-            background: $primary-color;
-          }
-        }
-        .done {
-          a, a:hover, a:active {
-            background: rgba($primary-color, .75);
-          }
-        }
+
+        // .current {
+        //   a, a:hover, a:active {
+        //     background: $primary-color;
+        //   }
+        // }
+
+        // .done {
+        //   a, a:hover, a:active {
+        //     background: rgba($primary-color, .75);
+        //   }
+        // }
+
         .error {
           a, a:hover, a:active {
 
@@ -61,9 +99,19 @@
       }
 
       > .content {
+        border-radius: 0px;
+        background: white;
+        margin-bottom: 16px;
+        margin-top: 16px;
+        margin: 0;
+        min-height: 400px;
+        max-height: 600px;
+
         > section {
           overflow: auto;
           width: 100%;
+          padding: 0;
+          padding-top: 16px;
 
           input[type='text'] {
             width: 100%;
@@ -71,7 +119,7 @@
 
           textarea {
             display: block;
-            height: 150px;
+            height: 120px;
             width: 100%;
 
             &.error {
@@ -87,10 +135,11 @@
         }
       }
 
-      > .actions {
-        a, a:hover, a:active {
-          background: $primary-color;
-        }
+      > .actions a {
+        @include primary-button-style;
+        // a, a:hover, a:active {
+        //   background: $primary-color;
+        // }
 
         .disabled {
           a, a:hover, a:active {
@@ -120,9 +169,9 @@
   }
 
   label {
-    background: rgba($primary-color, .2);
-    border: 2px dashed $primary-color;
-    color: $primary-color;
+    background: white;
+    border: 2px dashed rgba(black, 0.8);
+    color: rgba(black, 0.8);
     cursor: pointer;
     display: flex !important;
     flex-direction: column;
@@ -146,7 +195,7 @@
     }
 
     .fa {
-      color: $primary-color;
+      color: rgba(black, 0.8);
       font-size: 32px;
     }
   }

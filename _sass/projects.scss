@@ -103,12 +103,11 @@
 
         .card-content {
           height: 200px;
-          overflow: auto;
+          overflow: hidden;
           margin-top: 16px;
           margin-bottom: 16px;
 
           .card-title {
-            overflow: auto;
 
             h1 {
               color: rgba(black, 0.8);
