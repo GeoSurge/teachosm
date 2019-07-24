@@ -1,0 +1,21 @@
+---
+  username: "test_osm_user"
+  title: "new test3 Field Mapping Supplies"
+  description: "This is part of the second lesson of the course where we outline field mapping supply checklist"
+  audience: "primary"
+  difficulty: "beginner"
+  educator_prep_time: "less_than_1_hour"
+  education_activity_duration: 
+    - "local"
+    - "environment"
+    - "land_use"
+  project_type: "field_mapping"
+  group: "Centerville High School Field Mapping Class"
+  group_sequence: "1"
+  tags: 
+    - "population_migration"
+    - "political_organization_of_space"
+    - "gis"
+  project_pic: "compass_20190501.png"
+  project_file: "field_mapping_supplies_20190501.doc"
+  youtube_link: "none"
