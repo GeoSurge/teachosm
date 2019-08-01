@@ -107,7 +107,7 @@ const projectFileUploadURL = 'https://ohwy7x30i8.execute-api.us-east-1.amazonaws
 const pullRequestURL = 'https://p3keskibu8.execute-api.us-east-1.amazonaws.com/dev/posts';
 
 const submitForm = async () => {
-  const now = Date.now();
+  const now = moment().format('YYYY-MM-DD');
   let imageResponse, imageUploadResponse;
   let fileResponse, fileUploadResponse;
   Swal.fire({
