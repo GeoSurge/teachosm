@@ -233,8 +233,8 @@ fetch('{{site.baseurl}}/tags.json')
 
     const audienceSelector = $('.audience-filter');
     const difficultySelector = $('.difficulty-filter');
-    const preparationTimeSelector = $('.preparation-time-filter');
-    const projectTimeSelector = $('.project-time-filter');
+    const preparationTimeSelector = $('.preparation_time-filter');
+    const projectTimeSelector = $('.project_time-filter');
     const typeSelector = $('.type-filter');
 
     nameSelector.on('change', event => setName(event.target.value));
