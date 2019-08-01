@@ -106,6 +106,11 @@ const projectImageUploadURL = 'https://ohwy7x30i8.execute-api.us-east-1.amazonaw
 const projectFileUploadURL = 'https://ohwy7x30i8.execute-api.us-east-1.amazonaws.com/dev/requestUploadURL_content';
 const pullRequestURL = 'https://p3keskibu8.execute-api.us-east-1.amazonaws.com/dev/posts';
 
+const pdfFileName = fileName => {
+  const noExtension = fileName.substring(0, fileName.lastIndexOf('.'));
+  return `${noExtension}.pdf`;
+};
+
 const submitForm = async () => {
   const now = moment().format('YYYY-MM-DD');
   let imageResponse, imageUploadResponse;
@@ -170,7 +175,7 @@ const submitForm = async () => {
       difficulty,
       date_posted: now,
       osm_username: osmUsername,
-      filename: projectFileName,
+      filename: pdfFileName(projectFileName),
       group: '',
       layout: 'project',
       preparation_time: preparationTime,
