@@ -15,10 +15,10 @@ layout: default
       <p>Welcome to the Create Project form. This form was built to make it easy for contributors to add new projects to the TeachOSM projects portal. Please start by answering a couple questions about yourself.</p>
       <label for="name">What is your name? (The name entered here will show up as the author of the project) *</label>
       <input id="name" name="name" type="text" class="required">
-      <label for="email">What is your email address? *</label>
-      <input id="email" name="email" type="text" class="required email">
-      <label for="confirmEmail">Please confirm your email address *</label>
-      <input id="confirmEmail" name="confirmEmail" type="text" class="required email">
+      <label for="osmUsername">What is your OSM username? *</label>
+      <input id="osmUsername" name="osmUsername" type="text" class="required">
+      <label for="confirmOSMUsername">Please confirm your OSM username *</label>
+      <input id="confirmOSMUsername" name="confirmOSMUsername" type="text" class="required">
     </section>
     <h1>Project Information</h1>
     <section>
@@ -29,18 +29,18 @@ layout: default
       <input id="projectSubtitle" name="projectSubtitle" type="text">
       <label for="projectDescription">Please provide a brief description of the project. *</label>
       <textarea id="projectDescription" name="projectDescription" class="required"></textarea>
-      <label class="top-margin">Please upload a project image. (This will appear beside your project on the site) *</label>
+      <label class="top-margin">Please upload a project image. (This will appear beside your project on the site and should be a .png, .jpg, or .tif file) *</label>
       <br />
       <label style="font-style: italic;">You can either drag and drop an image or click on the "Upload Image" box below</label>
       <div class="uploadable">
-        <input id="projectImage" name="projectImage" type="file" class="required" />
+        <input id="projectImage" name="projectImage" type="file" accept="image/*" class="required" />
         <label id="projectImageLabel" for="projectImage"><i class="fa fa-image"></i><br />Upload Image</label>
       </div>
-      <label class="top-margin">Please upload your project materials. (This is the main content that users will download to help teach the course)*</label>
+      <label class="top-margin">Please upload your project materials. (This is the main content that users will download to help teach the course and should have one of these extensions: .pdf, .doc, .docx, .odt, .xls, .xlsx) *</label>
       <br />
       <label style="font-style: italic;">You can either drag and drop your file or click on the "Upload File" box below</label>
       <div class="uploadable">
-        <input id="projectFile" name="projectFile" type="file" class="required" />
+        <input id="projectFile" name="projectFile" type="file" accept=".pdf,.doc,.docx,.odt,.xls,.xlsx" class="required" />
         <label id="projectFileLabel" for="projectFile"><i class="fa fa-upload"></i><br />Upload File</label>
       </div>
     </section>

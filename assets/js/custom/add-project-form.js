@@ -6,8 +6,8 @@ const initializeForm = () => {
   form.validate({
     errorPlacement: (error, element) => element.before(error),
     rules: {
-      confirmEmail: {
-        equalTo: "#email",
+      confirmOSMUsername: {
+        equalTo: "#osmUsername",
       },
       projectImage: {
         required: true,
@@ -48,8 +48,8 @@ const initializeForm = () => {
 let name;
 const setName = value => name = value;
 
-let email;
-const setEmail = value => email = value;
+let osmUsername;
+const setOSMUsername = value => osmUsername = value;
 
 let title;
 const setTitle = value => title = value;
@@ -106,8 +106,13 @@ const projectImageUploadURL = 'https://ohwy7x30i8.execute-api.us-east-1.amazonaw
 const projectFileUploadURL = 'https://ohwy7x30i8.execute-api.us-east-1.amazonaws.com/dev/requestUploadURL_content';
 const pullRequestURL = 'https://p3keskibu8.execute-api.us-east-1.amazonaws.com/dev/posts';
 
+const pdfFileName = fileName => {
+  const noExtension = fileName.substring(0, fileName.lastIndexOf('.'));
+  return `${noExtension}.pdf`;
+};
+
 const submitForm = async () => {
-  const now = Date.now();
+  const now = moment().format('YYYY-MM-DD');
   let imageResponse, imageUploadResponse;
   let fileResponse, fileUploadResponse;
   Swal.fire({
@@ -169,8 +174,8 @@ const submitForm = async () => {
       description,
       difficulty,
       date_posted: now,
-      email,
-      filename: projectFileName,
+      osm_username: osmUsername,
+      filename: pdfFileName(projectFileName),
       group: '',
       layout: 'project',
       preparation_time: preparationTime,
@@ -224,7 +229,7 @@ fetch('{{site.baseurl}}/tags.json')
     });
 
     const nameSelector = $('#name');
-    const emailSelector = $('#email');
+    const osmUsernameSelector = $('#osmUsername');
     const titleSelector = $('#projectTitle');
     const subtitleSelector = $('#projectSubtitle');
     const descriptionSelector = $('#projectDescription');
@@ -233,12 +238,12 @@ fetch('{{site.baseurl}}/tags.json')
 
     const audienceSelector = $('.audience-filter');
     const difficultySelector = $('.difficulty-filter');
-    const preparationTimeSelector = $('.preparation-time-filter');
-    const projectTimeSelector = $('.project-time-filter');
+    const preparationTimeSelector = $('.preparation_time-filter');
+    const projectTimeSelector = $('.project_time-filter');
     const typeSelector = $('.type-filter');
 
     nameSelector.on('change', event => setName(event.target.value));
-    emailSelector.on('change', event => setEmail(event.target.value));
+    osmUsernameSelector.on('change', event => setOSMUsername(event.target.value));
     titleSelector.on('change', event => setTitle(event.target.value));
     subtitleSelector.on('change', event => setSubtitle(event.target.value));
     descriptionSelector.on('change', event => setDescription(event.target.value));
