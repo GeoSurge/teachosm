@@ -6,8 +6,8 @@ const initializeForm = () => {
   form.validate({
     errorPlacement: (error, element) => element.before(error),
     rules: {
-      confirmEmail: {
-        equalTo: "#email",
+      confirmOSMUsername: {
+        equalTo: "#osmUsername",
       },
       projectImage: {
         required: true,
@@ -48,8 +48,8 @@ const initializeForm = () => {
 let name;
 const setName = value => name = value;
 
-let email;
-const setEmail = value => email = value;
+let osmUsername;
+const setOSMUsername = value => osmUsername = value;
 
 let title;
 const setTitle = value => title = value;
@@ -169,7 +169,7 @@ const submitForm = async () => {
       description,
       difficulty,
       date_posted: now,
-      email,
+      osm_username: osmUsername,
       filename: projectFileName,
       group: '',
       layout: 'project',
@@ -224,7 +224,7 @@ fetch('{{site.baseurl}}/tags.json')
     });
 
     const nameSelector = $('#name');
-    const emailSelector = $('#email');
+    const osmUsernameSelector = $('#osmUsername');
     const titleSelector = $('#projectTitle');
     const subtitleSelector = $('#projectSubtitle');
     const descriptionSelector = $('#projectDescription');
@@ -238,7 +238,7 @@ fetch('{{site.baseurl}}/tags.json')
     const typeSelector = $('.type-filter');
 
     nameSelector.on('change', event => setName(event.target.value));
-    emailSelector.on('change', event => setEmail(event.target.value));
+    osmUsernameSelector.on('change', event => setOSMUsername(event.target.value));
     titleSelector.on('change', event => setTitle(event.target.value));
     subtitleSelector.on('change', event => setSubtitle(event.target.value));
     descriptionSelector.on('change', event => setDescription(event.target.value));
