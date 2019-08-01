@@ -15,4 +15,19 @@
   <script src="{{site.baseurl}}/assets/js/jquery-1.12.4.js"></script>
   <script type="text/javascript" src="{{site.baseurl}}/assets/js/bootstrap.js"></script>
 
+  <script>
+    var supportsES6 = function() {
+      try {
+        new Function("(a = 0) => a");
+        return true;
+      }
+      catch (err) {
+        return false;
+      }
+    }();
+
+    if (!supportsES6) {
+      alert('Some features on this site are not supported by your browser. We recommend updating your browser or using a different browser for the best possible experience.');
+    }
+  </script>
 </head>
