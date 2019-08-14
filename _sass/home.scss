@@ -54,6 +54,77 @@
 
 }
 
+#featured-blog-post {
+  background: $primary-color;
+  color: white;
+  margin: 72px auto;
+  padding: 50px;
+
+  @media screen and (max-width: 800px) {
+    padding: 50px 25px;
+
+    h2.section-heading {
+      font-size: 30px;
+    }
+
+    .col-md-6 {
+      padding: 15px !important;
+    }
+  }
+
+  .container {
+    max-width: 900px;
+
+    @media screen and (max-width: 800px) {
+      max-width: 700px;
+    }
+
+    a#check-it-out-wrapper {
+      color: black !important;
+
+      button#check-it-out {
+        background: white;
+        border-radius: 15px;
+        color: black !important;
+        padding: 15px 30px;
+      }
+    }
+
+    img#featured-blog-post-thumbnail {
+      display: none;
+      width: 100%;
+
+      @media screen and (max-width: 800px) {
+        display: block;
+      }
+    }
+
+    .col-md-6 {
+      padding: 30px;
+
+      &#featured-post-left {
+        padding-right: 45px;
+      }
+      &#featured-post-right {
+        padding-left: 45px;
+      }
+
+      img#featured-blog-post-thumbnail {
+        display: block;
+        /*
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align: middle;*/
+
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 .calendar {
 
   margin-top: 72px;
