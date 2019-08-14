@@ -165,4 +165,8 @@
     max-width: 100%;
     user-select: none;
   }
+
+  a {
+    overflow-wrap: break-word;
+  }
 }
