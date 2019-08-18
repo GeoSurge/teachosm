@@ -152,3 +152,9 @@
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     background-color: #ecf0f1;
 }
+
+a.current {
+  background:#7EBC6F;
+  color:#fff;
+  border-radius: 3px;
+}

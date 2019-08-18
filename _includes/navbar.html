@@ -23,7 +23,7 @@
       </a>
 
     {% if page.title == 'home' %}
-      <div class="horizontal-landing-page-menu">
+      <div class="horizontal-landing-page-menu" style="padding-left:0px">
           <ul class="nav navbar-nav menu2 hidden-xs">
             <li class="t-title"><a href="#about" class="page-scroll">About</a></li>
             <li class="t-title"><a href="#calendar" class="page-scroll">Calendar</a></li>
@@ -55,3 +55,25 @@
     </div>
   </div>
 </nav>
+
+<script>
+$(function(){
+
+  if (window.location.pathname == '/') {
+      console.log('homepage');
+      console.log(window.location.href);
+    } else {
+
+      $('a').each(function() {
+        //console.log(location.search)
+        if ($(this).prop('href') == window.location.href) {
+        $(this).addClass('current');
+        }
+        if ($(this).prop('href')+'/' == window.location.href) {
+          $(this).addClass('current');
+        }
+      });
+  }
+  
+});
+</script>
