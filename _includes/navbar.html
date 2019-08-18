@@ -59,7 +59,7 @@
 <script>
 $(function(){
 
-  if (window.location.pathname == '/') {
+  if (window.location.pathname == '/' || window.location.pathname == '/teachosm/') {
       console.log('homepage');
       console.log(window.location.href);
     } else {
@@ -74,6 +74,6 @@ $(function(){
         }
       });
   }
-  
+
 });
 </script>
