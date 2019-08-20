@@ -3,8 +3,8 @@ Test site for teachosm
 
 ## install dependencies (recommend ruby version >= 2.3.0)
 ```
-gem install bundler jekyll
-bundle install
+gem install bundler jekyll --user-install
+bundle install --path vendor/bundle
 ```
 
 ## running development server
