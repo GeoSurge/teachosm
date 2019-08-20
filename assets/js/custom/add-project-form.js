@@ -31,6 +31,10 @@ const initializeForm = () => {
     transitionEffect: "slideLeft",
     titleTemplate: "#title#",
     onStepChanging: (event, currentIndex, newIndex) => {
+      if (currentIndex > newIndex)
+        {
+            return true;
+        }
       form.validate().settings.ignore = ":disabled,:hidden";
       return form.valid();
     },
