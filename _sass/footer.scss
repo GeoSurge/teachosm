@@ -27,7 +27,7 @@ ul.social-buttons li a {
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  font-size: 20px;
+  font-size: 24px;
   font-family: sans-serif;
   line-height: 40px;
   outline: 0;
@@ -36,6 +36,7 @@ ul.social-buttons li a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
+  padding-top: 2px;
 }
 
 ul.social-buttons li a:hover,
