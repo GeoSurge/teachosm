@@ -36,7 +36,7 @@ layout: default
 							<p>{{resource.description}}</p>
 						</div>
 						<div id="photo-container">
-						  <img src="../assets/images/resource-thumbnails/{{resource.thumbnail}}">
+						  <img src="{{site.baseurl}}/assets/images/resource-thumbnails/{{resource.thumbnail}}">
 						{% if resource.tags.size > 0 %}
 							{% for tag in resource.tags %}
 								<h4 class="card-tag">{{tag}}</h4>
