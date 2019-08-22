@@ -1,6 +1,6 @@
 .blog.content {
-  margin-top: 140px;
-  margin: 100px auto;
+  //margin-top: 140px;
+  margin: 30px auto;
   max-width: 1000px;
   overflow: hidden;
   padding: 32px;
@@ -15,9 +15,11 @@
     margin-bottom: 21.5px;
 
     .page-title {
-      font-size: 32px;
+      font-size: 40px;
       font-weight: bold;
-      margin: 0;
+      font-family: "Anderson_Grotesk", sans-serif;
+      font-style: italic;
+      margin: auto;
     }
   }
 
@@ -169,4 +171,20 @@
   a {
     overflow-wrap: break-word;
   }
+}
+
+.panel-border-style {
+    background: white;
+    box-shadow: -2px 0 8px 0 rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 16px;
+    width: 100%;
+    margin: 16px;
+    transition: width 0.25s;
+}
+
+.wrapper {
+    display: flex;
+    background: #eee;
+    margin-top: 60px;
 }
