@@ -121,7 +121,7 @@
 
             h2 {
               color: rgba(black, 0.6);
-              font-size: 14px;
+              font-size: 16px;
               margin-top: 0;
             }
 
@@ -282,4 +282,14 @@
   font-size: 45px;
   color: #7EBC6F;
   padding-right: 8px;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.card-child {
+  #width: 300px;
 }
