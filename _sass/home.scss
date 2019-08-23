@@ -55,7 +55,8 @@
 }
 
 #featured-blog-post {
-  background: $primary-color;
+  background: rgb(126,188,111);
+  background: linear-gradient(180deg, rgba(126,188,111,1) 0%, rgba(56,56,56,1) 100%);
   color: white;
   margin: 72px auto;
   padding: 50px;
@@ -269,3 +270,4 @@
 .educational_content:before {
     content: url(../assets/images/about_icons/educational_content.png);
 }
+

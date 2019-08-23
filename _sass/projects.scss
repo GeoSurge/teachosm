@@ -23,8 +23,10 @@
     .projects-title {
       align-items: center;
       display: flex;
-      height: 56px;
-      margin-bottom: 24px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      #height: 56px;
+      margin: 10px 0px 10px 0px;
 
       .page-title {
         font-size: 40px;
@@ -37,9 +39,9 @@
       #project-search {
         border-radius: 4px;
         border: 1px solid $primary-color;
-        max-width: 500px;
+        width: 500px;
         padding: 8px;
-        width: 100%;
+        #width: 100%;
         margin-right: 16px;
 
         @media(max-width: $tablet-width) {
@@ -48,7 +50,8 @@
       }
 
       .project-filter-button {
-        margin-left: auto;
+        #margin-left: auto;
+        margin: 10px 0px 10px 0px;
       }
     }
 
@@ -292,4 +295,8 @@
 
 .card-child {
   #width: 300px;
+}
+
+#search-and-add {
+  display: flex;
 }
