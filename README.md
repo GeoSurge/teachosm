@@ -1,3 +1,6 @@
+# This code is out of date. The latest website code is here: https://github.com/osmus/teachosm.org
+## This repo is still being used for Issues.
+
 # teachosm
 Test site for teachosm
 
